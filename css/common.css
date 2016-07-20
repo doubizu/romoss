@@ -15,7 +15,6 @@ html {
 	width: 100%;
 	flex-flow: column nowrap;
 }
-
 .page .navbar {
 	flex: 0 0 50px;
 	line-height: 50px;
@@ -28,12 +27,10 @@ html {
 	display: flex;
 	flex-flow: row nowrap;
 }
-
 .page .content {
 	flex: 1 1 90%;
 	overflow-y: scroll;
-	 overflow-x: hidden;
-
+	overflow-x: hidden;
 }
 .page .toolbar {
 	flex: 0 0 49px;
@@ -129,7 +126,6 @@ html {
 	transform: rotate(-45deg);
 }
 
-
 /**
  * toast弹框调整 
  */
@@ -138,4 +134,21 @@ html {
 	min-height: 1em;
 	margin-left: -7em;
 	padding: 20px 0px;
+}
+
+/**
+ * 轮播图片都为100%
+ */
+.swiper-container img {
+	width: 100%;
+	display: block;
+}
+
+/**
+ * 查询条
+ */
+.search_show {
+	display: none;
+	margin-top: 0px;
+	font-size: 14px;
 }

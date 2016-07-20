@@ -1,0 +1,81 @@
+/**
+ * 每行5列网格
+ */
+.gird5 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	flex-flow: row nowrap;
+	border-bottom: 5px solid #EEEEEE;
+}
+.gird5 div{
+	flex: 0 0 20%;
+	text-align: center;
+	color: #a4a4a4;
+	font-size: 12px;
+}
+.gird5 div img {
+	width: 100%;
+}
+
+/**
+ * 左右2格 上下2格gird
+ */
+.gird22 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	flex-flow: row nowrap;
+	border-bottom: 5px solid #EEEEEE;
+}
+.gird22 div{
+	flex: 0 0 50%;
+}
+.gird22 div img{
+	width: 100%;
+	display: block;
+}
+.gird22 div:nth-child(2) {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	flex-flow: column nowrap;
+	border-left: 1px solid #EEEEEE;
+}
+.gird22 div:nth-child(2) div{
+	flex: 0 0 50%;
+}
+.gird22 div:nth-child(2) div:nth-child(1) {
+	border-bottom: 1px solid #EEEEEE;
+}
+
+/**
+ * 一行网格
+ */
+.gird1 {
+	border-bottom: 5px solid #EEEEEE;
+}
+.gird1 img {
+	width: 100%;
+	display: block;
+}
+
+/**
+ * 今日推荐
+ */
+.recommend {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #EEEEEE;
+}
+.recommend span {
+	color: #666666;
+	padding-left: 20px;
+	border-left: 3px solid #04a7b0;
+}
