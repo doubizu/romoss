@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的设计</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mydesign.css"/>
+	</head>
+	<body>
+		<div class="page">
+			<div class="navbar">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
+				<span class="body">
+					我的作品
+				</span>
+				<span class="footer">
+					<a href="javascript:;" id="delete">删除</a>
+				</span>
+			</div>
+			<div class="content">
+				<div class="weui_navbar" style="position: static;">
+			        <div class="weui_navbar_item" id="">
+			        	未购买
+			        </div>
+			        <div class="weui_navbar_item weui_bar_item_on" id="">
+			        	已购买
+			        </div>
+			    </div>
+			    <div class="weui_cells weui_cells_access">
+			        <a class="weui_cell designcell" href="javascript:;">
+			        	<div class="weui_cell_hd">
+			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
+			        	</div>
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <h4>sense 2S 10000 mAh</h4>
+			                <p>
+			                	<font class="rom-money">&yen;69.00</font>
+			                	<font class="rom-price">89.00</font>
+			                </p>
+			                <p class="date">
+			                	创建日期：2016-01-01 12:12:12
+			                </p>
+			            </div>
+			            <div class="weui_cell_ft">
+			            </div>
+			        </a>
+			        <a class="weui_cell designcell" href="javascript:;">
+			        	<div class="weui_cell_hd">
+			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
+			        	</div>
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <h4>sense 2S 10000 mAh</h4>
+			                <p>
+			                	<font class="rom-money">&yen;69.00</font>
+			                	<font class="rom-price">89.00</font>
+			                </p>
+			                <p class="date">
+			                	创建日期：2016-01-01 12:12:12
+			                </p>
+			            </div>
+			            <div class="weui_cell_ft">
+			            </div>
+			        </a>
+			    </div>
+			</div>
+			<div class="toolbar">
+				<div class="weui_navbar">
+			        <div class="weui_navbar_item weui_bar_item_on" id="shopcar">
+			        	<img src="img/我的作品.png"/>&nbsp;我要订制
+			        </div>
+			        <div class="weui_navbar_item" id="ding">
+			        	<img src="img/我的购物车.png"/>&nbsp;我的购物车
+			        </div>
+			    </div>
+			</div>
+		</div>
+		
+		<div class="weui_dialog_alert" style="display: none;" id="dialog2">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">提示信息</strong></div>
+		        <div class="weui_dialog_bd">删除成功</div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="weui_dialog_confirm" id="dialog1" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">定制协议</strong></div>
+		        <div class="weui_dialog_bd">
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        	申明：您明白、并确 认且同意，您提交的用于定制的照片
+		        </div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 轮播插件 -->
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- jquery手势插件 -->
+	<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".weui_dialog_alert .weui_btn_dialog").swipe({
+				tap : function() {
+					$("#dialog2").hide();
+				}
+			});
+			
+			$(".weui_dialog_confirm .weui_btn_dialog").swipe({
+				tap : function() {
+					$("#dialog1").hide();
+				}
+			});
+			
+			$("#shopcar").swipe({
+				tap : function() {
+					window.location.href = "shopcar.html";
+				}
+			});
+			
+			$("#ding").swipe({
+				tap : function() {
+					$("#dialog1").show();
+				}
+			});
+			
+			$("#delete").swipe({
+				tap : function() {
+					if( $(this).html() == "删除" ) {
+						$(this).html("取消");
+						$(".weui_cells .weui_cell .weui_cell_ft").html('<i class="weui_icon_cancel""></i>');
+						$(".weui_icon_cancel").swipe({
+							tap : function() {
+								$("#dialog2").show();
+							}
+						});
+					} else {
+						$(this).html("删除");
+						$(".weui_cells .weui_cell .weui_cell_ft").html('');
+					}
+				}
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="page">
+			<div class="content">
+				<div class="row">
+					<img src="img/banner.png" class="imgwarp" />
+				</div>
+				<div class="row banner">
+					<div>sense 2S</div>
+					<div>10000+mAh | &yen;66.00</div>
+				</div>
+				<div class="row" style="text-align: center;">
+					<img src="img/triangle.png" />
+				</div>
+				<div class="row">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/pro1.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pro2.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pro3.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pro1.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pro2.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pro3.png" />
+							</div>
+						</div>
+						<!-- 如果需要分页器 -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="row baby">
+					<div class="baby-left">
+						<div>
+							<img src="img/01.png" width="35" height="40" />
+							<p>
+								<a href="#">你最爱的宝宝</a>
+							</p>
+						</div>
+						<p>您可以把您宝贝的照片做在移动电源上面，让他时时刻刻陪伴着您</p>
+					</div>
+					<div class="baby-right">
+						<div>
+							<img src="img/001.png" width="70" height="110" />
+							<span>vs</span>
+							<img src="img/0011.png" width="50" height="110" />
+						</div>
+					</div>
+				</div>
+				<div class="row Selfie">
+					<div class="Selfie-left">
+						<div>
+							<img src="img/002.png" width="70" height="110" />
+							<span>vs</span>
+							<img src="img/0022.png" width="50" height="110" />
+						</div>
+					</div>
+					<div class="Selfie-right">
+						<div class="Selfie-a">
+							<p>
+								<a href="#">你最爱的明星</a>
+							</p>
+							<img src="img/02.png" width="35" height="40" />
+						</div>
+						<p>您可以把您宝贝的照片做在移动电源上面，让他时时刻刻陪伴着您</p>
+					</div>
+				</div>
+				<div class="row baby">
+					<div class="baby-left">
+						<div>
+							<img src="img/03.png" width="35" height="40" />
+							<p>
+								<a href="#">你最爱的自拍</a>
+							</p>
+						</div>
+						<p>您可以把您宝贝的照片做在移动电源上面，让他时时刻刻陪伴着您</p>
+					</div>
+					<div class="baby-right">
+						<div>
+							<img src="img/003.png" width="70" height="110" />
+							<span>vs</span>
+							<img src="img/0033.png" width="50" height="110" />
+						</div>
+					</div>
+				</div>
+				<div class="row Designer">
+					<b>——— 你，就是自己的设计师 ———</b>
+				</div>
+				<div class="row Designers">
+					<b>you,is your designers</b>
+				</div>
+				<div class="row">
+					<img src="img/ddp.png" class="Designer-img" />
+				</div>
+			</div>
+
+			<div class="toolbar">
+				<div class="weui_navbar">
+					<div class="weui_navbar_item" id="me">
+						<img src="img/my.png" />&nbsp;我的作品
+					</div>
+					<div class="weui_navbar_item weui_bar_item_on" id="car">
+						<img src="img/car.png" />&nbsp;我的购物车
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="toast" style="display: none;">
+			<div class="weui_mask_transparent"></div>
+			<div class="weui_toast">
+				亲，您还没有购买产品哦<br> 请先选择产品模式
+			</div>
+		</div>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 轮播插件 -->
+		<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- jquery手势插件 -->
+		<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					effect: 'coverflow',
+					autoplay: 3000,
+					loop: true,
+					pagination: '.swiper-pagination',
+					slidesPerView: 3,
+					centeredSlides: true,
+					coverflow: {
+						rotate: 30,
+						stretch: 10,
+						depth: 60,
+						modifier: 2,
+						slideShadows: true
+					}
+				});
+
+				$("#me").swipe({
+					tap: function() {
+						$(this).addClass("weui_bar_item_on");
+						$("#car").removeClass("weui_bar_item_on");
+						window.location.href = "mydesign.html";
+					}
+				});
+
+				$("#car").swipe({
+					tap: function() {
+						$(this).addClass("weui_bar_item_on");
+						$("#me").removeClass("weui_bar_item_on");
+						$("#toast").show("fast").delay(1000).hide("fast", function() {
+							window.location.href = "shopcar.html";
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

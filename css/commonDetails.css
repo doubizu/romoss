@@ -1,0 +1,36 @@
+
+.page .toolbar .toolbal-div{
+	width: 20%;
+	border-right: 1px solid #04a7b0;
+	text-align: center;
+	position: relative;
+}
+ .page .toolbar .toolbal-div .toolbar-span{
+ 	display: block;
+	width:12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #F43530;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+ }
+.page .toolbar .toolbal-div .toolbar-span1{
+	display: block;
+	color: #FFFFFF;
+	font-size: 6px;
+	position: absolute;
+	top: -3px;
+	left: 54%;
+	z-index: 99;
+}
+.page .toolbar .weui_navbar img {
+	width: 35px;
+	
+}
+.page .toolbar .weui_navbar .toolbar-p{
+	font-size: 12px;
+	color: #CCCCCC;
+	padding-left: 2px;
+	
+}
