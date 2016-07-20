@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>罗曼订制页面</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/design.css"/>
+		<link rel="stylesheet" type="text/css" href="font/font.css"/>
+	</head>
+	<body>
+		<div class="page">
+			<div class="navbar">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
+				<span class="body">
+					个性化定制
+				</span>
+				<span class="footer">
+					
+				</span>
+			</div>
+			<div class="content design">
+				<div class="left">
+					<canvas id="polymos" class="polymos" width="256px" height="450px"></canvas>
+				</div>
+				<div class="right">
+					<div class="item" id="image">
+						<img src="img/design/挑选美图1.png"/>
+						<p>选图</p>
+					</div>
+					<div class="item" id="upfileimg">
+						<img src="img/design/上传1.png"/>
+						<p>上传</p>
+					</div>
+					<div class="item" id="text">
+						<img src="img/design/文字 (2).png"/>
+						<p>文字</p>
+					</div>
+					<div class="item" id="mydesign">
+						<img src="img/design/我的作品 (2).png"/>
+						<p>作品</p>
+					</div>
+					<div class="item" id="zoom">
+						<img src="img/design/缩放 (2).png"/>
+						<p>缩放</p>
+					</div>
+					<div class="item" id="rotation">
+						<img src="img/design/旋转 (3).png"/>
+						<p>旋转</p>
+					</div>
+					<div class="item" id="delete">
+						<img src="img/design/删除 (2).png"/>
+						<p>删除</p>
+					</div>
+					<div class="item" id="save">
+						<img src="img/design/保存 (2).png"/>
+						<p>保存</p>
+					</div>
+				</div>
+				
+				<input type="file" id="upfile" style="display:none;" accept="image/jpg,image/jpeg,image/png,image/gif" multiple/>
+			</div>
+			<div class="toolbar">
+				<div class="weui_navbar">
+					<div class="weui_navbar_item" id="make">
+						商品详情
+					</div>
+					<div class="weui_navbar_item">
+						预览设计
+					</div>
+					<div class="weui_navbar_item weui_bar_item_on" id="shopcar">
+						加入购物车
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 上拉框 -->
+		<div id="actionSheet_wrap">
+		    <!--<div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>-->
+		    <div class="weui_actionsheet" id="weui_actionsheet">
+		        <div class="weui_actionsheet_menu">
+		        </div>
+		        <div class="weui_actionsheet_action">
+		            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+		        </div>
+		    </div>
+		</div>
+		
+		<!-- 过渡条 -->
+		<div id="loadingToast" class="weui_loading_toast" style="display: none;">
+		    <div class="weui_mask_transparent"></div>
+		    <div class="weui_toast">
+		        <div class="weui_loading">
+		            <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+		        </div>
+		        <p class="weui_toast_content">数据加载中</p>
+		    </div>
+		</div>
+		
+		<!-- 文字输入弹窗 -->
+		<div class="weui_dialog_confirm" id="confirm_dialog" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">请输入文字</strong></div>
+		        <div class="weui_dialog_bd">
+		        	<textarea class="weui_textarea" placeholder="请输入文字" rows="3"></textarea>
+		        </div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="weui_dialog_alert" id="saveDialog" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">保存成功</strong></div>
+		        <div class="weui_dialog_bd">恭喜您，您的设计保存成功，点击作品进行查看!</div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        </div>
+		    </div>
+		</div>
+		
+		<script type="text/html" id="tmp_image">
+			<ul class="imgset">
+				<li><img src="img/png/1.png"/></li>
+				<li><img src="img/png/2.png"/></li>
+				<li><img src="img/png/3.png"/></li>
+				<li><img src="img/png/4.png"/></li>
+				<li><img src="img/png/5.png"/></li>
+				<li><img src="img/png/6.png"/></li>
+				<li><img src="img/png/7.png"/></li>
+				<li><img src="img/png/8.png"/></li>
+				<li><img src="img/png/9.png"/></li>
+			</ul>
+		</script>
+		
+		<script type="text/html" id="tmp_zoom">
+			<div class="dragdealer" id="dragdealer">
+	            <div class="handle red-bar">
+	              <span class="value"></span>%
+	            </div>
+	       </div>
+		</script>
+		
+		<script type="text/html" id="tmp_textset">
+			<div class="weui_cells">
+		        <div class="weui_cell weui_cell_select weui_select_after">
+		            <div class="weui_cell_hd">
+		                <label for="" class="weui_label">颜色</label>
+		            </div>
+		            <div class="weui_cell_bd weui_cell_primary">
+		                <select class="weui_select colorselect">
+		                	<option>Black</option>
+		                	<option>White</option>
+		                	<option>Red</option>
+		                	<option>Yellow</option>
+		                	<option>Lime</option>
+		                	<option>Aqua</option>
+		                	<option>Blue</option>
+		                	<option>Fuchsia</option>
+		                	<option>Gray</option>
+		                	<option>Silver</option>
+		                	<option>Maroon</option>
+		                	<option>Olive</option>
+		                	<option>Green</option>
+		                	<option>Teal</option>
+		                	<option>Navy</option>
+		                	<option>Purple</option>
+		                	<option>aliceblue</option>
+		                	<option>antiquewhite</option>
+		                </select>
+		            </div>
+		        </div>
+		        
+		        <div class="weui_cell weui_cell_select weui_select_after">
+		            <div class="weui_cell_hd">
+		                <label for="" class="weui_label">字体</label>
+		            </div>
+		            <div class="weui_cell_bd weui_cell_primary">
+		                <select class="weui_select fontselect">
+		                	<option value="Arial">默认</option>
+		                	<option>悦变</option>
+		                	<option>毛笔行书</option>
+		                	<option>古韵</option>
+		                	<option>行楷</option>
+		                	<option>硬笔行书</option>
+		                	<option>几何体</option>
+		                	<option>丛台体</option>
+		                	<option>炫丽体</option>
+		                	<option>刀锋黑草</option>
+		                	<option>萝卜体</option>
+		                </select>
+		            </div>
+		        </div>
+		    </div>
+        </div>
+		</script>
+	</body>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/easeljs-0.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dragdealer.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/draw.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var actionsheet = cancel = curdraw = confirmDialog = saveDialog = null;
+
+	$(function(){
+		actionsheet = $("#weui_actionsheet"); //上拉窗口
+		cancel = $("#actionsheet_cancel"); //退出上窗口
+		confirmDialog = $("#confirm_dialog"); //文字弹窗
+		saveDialog = $("#saveDialog"); //保存成功
+		curdraw = new Draw("polymos");
+		
+		/**
+		 * 图文切换时
+		 */
+		curdraw.onchange(function(){
+			if( curdraw.current.name.indexOf("text") != -1 ) {
+				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_textset").html());
+				hideActionSheet().then(function(){
+					actionsheet.addClass("weui_actionsheet_toggle");
+					actionsheet.find(".colorselect").change(function(){
+						curdraw.setColor($(this).val());
+					});
+					actionsheet.find(".fontselect").change(function(){
+						curdraw.setFamily($(this).val());
+					});
+				});
+			} else if ( curdraw.current.name.indexOf("bitmap") != -1 ) {
+				hideActionSheet();
+			}
+		});
+		
+		$("#image").swipe({ //精选美图
+			tap : function() {
+				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_image").html());
+				hideActionSheet().then(function(){
+					actionsheet.addClass("weui_actionsheet_toggle");
+					$(".imgset li img").unbind().swipe({
+						tap : function() {
+							loadImg($(this).attr("src")).then(function( img ){
+								curdraw.addBitmap(img);
+			                    hideActionSheet();
+							});
+						}
+					});
+				});
+			}
+		});
+		
+		$("#upfileimg").swipe({ //上传图片
+			tap : function() {
+				hideActionSheet();
+				$("#upfile").unbind().change(function() {
+                    var file = this.files[0];
+                    if( !file ) {
+                        return;
+                    }
+                    readFile( file ).then(function( img ){
+                    	curdraw.addBitmap(img,"upfile");
+                    });
+                });
+                return $("#upfile").click();
+			}
+		});
+		
+		$("#text").swipe({
+			tap : function() {
+				hideActionSheet();
+				confirmDialog.show();
+			}
+		});
+		
+		$("#delete").swipe({
+			tap : function() {
+				hideActionSheet();
+				curdraw.delete();
+			}
+		});
+		
+		$("#save").swipe({
+			tap : function() {
+				hideActionSheet();
+				$("#loadingToast").show();
+                curdraw.save().then(( img )=>{
+                	//img 为base64格式
+                    sessionStorage.setItem(new Date().getTime(),img);
+                    curdraw.clear();
+                    $("#loadingToast").hide();
+                    saveDialog.show();
+                });
+			}
+		});
+		
+		$("#zoom").swipe({
+			tap : function() {
+				if( curdraw.current == null ) {
+					return;
+				}
+				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_zoom").html());
+				hideActionSheet().then(function(){
+					actionsheet.addClass("weui_actionsheet_toggle");
+					
+					var multiple = 1;
+					var width = curdraw.getScale().x;
+					if( curdraw.current.name.indexOf("text") != -1 ) {
+						multiple = 10; //文字扩大10位
+					} else if( width >= 0.8 ) { //图片如小于0.8扩大3倍
+						multiple = 3;
+					}
+					
+					new Dragdealer('dragdealer', {
+	        			x : width / multiple,
+						animationCallback: function(x, y) {
+						    $('#dragdealer .value').text(Math.round(x * 100));
+						    curdraw.setScale( x * multiple,x * multiple );
+						}
+					});
+				});
+			}
+		});
+		
+		$("#rotation").swipe({
+			tap : function() {
+				if( curdraw.current == null ) {
+					return;
+				}
+				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_zoom").html());
+				hideActionSheet().then(function(){
+					actionsheet.addClass("weui_actionsheet_toggle");
+					new Dragdealer('dragdealer', {
+	        			x : curdraw.getRotation() / 360,
+						animationCallback: function(x, y) {
+						    $('#dragdealer .value').text(Math.round(x * 100));
+						    curdraw.setRotation(x * 360);
+						}
+					});
+				});
+			}
+		});
+		
+		//取消文字弹窗
+		confirmDialog.find(".default").swipe({
+			tap : function() {
+				confirmDialog.find(".weui_textarea").val("");
+				confirmDialog.hide();
+			}
+		});
+		
+		//确认文字弹窗
+		confirmDialog.find(".primary").swipe({
+			tap : function() {
+				 curdraw.addText(confirmDialog.find(".weui_textarea").val());
+				confirmDialog.hide();
+			}
+		});
+		
+		//保存成功提示
+		saveDialog.find(".primary").swipe({
+			tap : function() {
+				saveDialog.hide();
+			}
+		});
+		
+		//上拉退出按钮
+		cancel.swipe({
+			tap : function() {
+				hideActionSheet();
+			}
+		});
+		
+		//我的作品
+		$("#mydesign").swipe({
+			tap : function() {
+				window.location.href = "mydesign.html";
+			}
+		});
+		//跳转详情
+		$("#make").swipe({
+			tap : function() {
+				window.location.href = "make.html";
+			}
+		});
+		$("#shopcar").swipe({
+			tap : function() {
+				window.location.href = "shopcar.html";
+			}
+		});
+	});
+	
+	function hideActionSheet() {
+		var d = $.Deferred();
+		
+		isshow = true;
+		actionsheet.removeClass("weui_actionsheet_toggle");
+		setTimeout(function(){
+			d.resolve();
+		},400);
+		
+		return d.promise();
+	}
+	
+	function loadImg( src ) {
+		$("#loadingToast").show();
+		var d = $.Deferred();
+		
+		var img = new Image();
+		img.src = src;
+		img.onload = function() {
+			d.resolve( img );
+			$("#loadingToast").hide();
+		}
+		
+		return d.promise();
+	}
+	
+	function readFile( file ) {
+		$("#loadingToast").show();
+		var d = $.Deferred();
+		
+		var fr = new FileReader();
+		fr.readAsDataURL( file );
+		fr.onload = function() {
+			var img = new Image();
+            img.src = fr.result;
+            img.onload = function() {
+                d.resolve( img );
+				$("#loadingToast").hide();
+            }
+		}
+		
+		return d.promise();
+	}
+	</script>
+</html>

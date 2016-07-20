@@ -167,3 +167,13 @@
 	display: block;
 	margin-bottom: 20px;
 }
+
+/**
+ * toast弹框调整 
+ */
+.weui_toast {
+	width: 14em;
+	min-height: 1em;
+	margin-left: -7em;
+	padding: 20px 0px;
+}

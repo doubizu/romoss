@@ -188,7 +188,7 @@
 					<div class="weui_navbar_item" id="problem">
 						<img src="img/chengjianwenti.png" />&nbsp;常见问题
 					</div>
-					<div class="weui_navbar_item weui_bar_item_on" id="make">
+					<div class="weui_navbar_item weui_bar_item_on" id="design">
 						<img src="img/woyaodingz.png" />&nbsp;我要定制
 					</div>
 				</div>
@@ -237,6 +237,12 @@
 						$(".Tabs_box").eq(i).show();
 					})
 				})
+				
+				$("#design").swipe({
+					tap : function() {
+						window.location.href = "design.html";
+					}
+				});
 			});
 		</script>
 	</body>

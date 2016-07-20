@@ -72,11 +72,11 @@
 			</div>
 			<div class="toolbar">
 				<div class="weui_navbar">
-			        <div class="weui_navbar_item weui_bar_item_on" id="shopcar">
-			        	<img src="img/我的作品.png"/>&nbsp;我要订制
-			        </div>
 			        <div class="weui_navbar_item" id="ding">
-			        	<img src="img/我的购物车.png"/>&nbsp;我的购物车
+			        	<img src="img/woyaodingz.png"/>&nbsp;我要订制
+			        </div>
+			        <div class="weui_navbar_item weui_bar_item_on" id="shopcar">
+			        	<img src="img/car.png"/>&nbsp;我的购物车
 			        </div>
 			    </div>
 			</div>
@@ -131,13 +131,13 @@
 				}
 			});
 			
-			$("#shopcar").swipe({
+			$("#ding").swipe({
 				tap : function() {
-					window.location.href = "shopcar.html";
+					window.location.href = "design.html";
 				}
 			});
 			
-			$("#ding").swipe({
+			$("#shopcar").swipe({
 				tap : function() {
 					$("#dialog1").show();
 				}
