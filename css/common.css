@@ -15,6 +15,7 @@ html {
 	width: 100%;
 	flex-flow: column nowrap;
 }
+
 .page .navbar {
 	flex: 0 0 50px;
 	line-height: 50px;
@@ -27,10 +28,12 @@ html {
 	display: flex;
 	flex-flow: row nowrap;
 }
+
 .page .content {
 	flex: 1 1 90%;
 	overflow-y: scroll;
 	overflow-x: hidden;
+
 }
 .page .toolbar {
 	flex: 0 0 49px;
@@ -124,6 +127,17 @@ html {
 	border-top: 3px solid white;
 	border-left: 3px solid white;
 	transform: rotate(-45deg);
+}
+
+
+/**
+ * toast弹框调整 
+ */
+.weui_toast {
+	width: 14em;
+	min-height: 1em;
+	margin-left: -7em;
+	padding: 20px 0px;
 }
 
 /**

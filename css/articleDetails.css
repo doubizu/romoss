@@ -1,0 +1,23 @@
+.articledetail .articleDetails{
+	overflow-y:hidden;
+}
+
+.article-Details{
+	padding:0px 10px;
+}
+.article-Details .article-title{
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.article-Details .article-title h4 a{
+	color: #000000;
+}
+.article-Details .article-title p{
+	font-size: 13px;
+	color: #CCCCCC;
+}
+.article-Details .article-content{
+	font-size: 13px;
+	padding-right: 10px;
+	color: #7e7e7e;
+}
