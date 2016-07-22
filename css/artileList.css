@@ -1,9 +1,7 @@
-.articleList .article{
-	overflow-y:hidden;
-}
+
 
 .article-list{
-	padding: 10px;
+	padding: 10px 10px 10px 8px;
 	border-bottom:1px solid #CCCCCC ;
 }
 .article .list-title{
