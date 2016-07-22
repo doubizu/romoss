@@ -302,7 +302,7 @@
 			tap : function() {
 				hideActionSheet();
 				$("#loadingToast").show();
-                curdraw.save().then(( img )=>{
+                curdraw.save().then(function( img ) {
                 	//img 为base64格式
                     sessionStorage.setItem(new Date().getTime(),img);
                     curdraw.clear();
