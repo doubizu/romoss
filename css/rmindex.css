@@ -31,10 +31,10 @@
 	
 	flex-flow: row nowrap;
 	border-bottom: 5px solid #EEEEEE;
+	
 }
 .gird22 div{
 	flex: 0 0 50%;
-	height: 170px;
 }
 .gird22 div img{
 	width: 100%;
