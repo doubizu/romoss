@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>会员中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/memberCenter.css"/>
+	</head>
+	<body>
+		<div class="page">		
+			<div class="content memberCenter">
+				<div class="row memberCenter-header">
+					<div class="menber-top">
+						<div class="menber-tou">
+							<img src="img/memberCenter/头像.png" width="80"/>
+						</div>
+						<div class="menber-center">
+							<h4>yi意气风发~往西！</h4>
+							<p>[普通会员]</p>
+						</div>
+						<div class="menber-right">
+							<img src="img/memberCenter/菜单.png" width="10"/>
+						</div>
+					</div>
+					<ul>
+						<li><a href="#">余额<span>3689.00</span></a></li>
+						<li><a href="#">积分<span>369</span></a></li>
+						<li><a href="#">消息<span>3</span></a></li>
+					</ul>
+				</div>
+				<div class="row memberCenter-border">
+				    <div class="border-left">
+				    	<img src="img/memberCenter/矩形 21.png"/>
+				    	<p>充值</p>
+				    </div>
+				    <div class="border-right">
+				    	<img src="img/memberCenter/矩形 21.png"/>
+				    	<p>提现</p>
+				    </div>
+				</div>
+				<div class="row orderform">
+					<div class="orderform-a">
+						<ul>
+							<li><a href="#"><img src="img/memberCenter/全部订单.png"/></a></li>
+							<li><a href="#">全部订单</a></li>
+							<li><a href="#">查看全部订单</a></li>
+							<li><a href="#"><img src="img/memberCenter/菜单 拷贝.png"/></a></li>
+						</ul>
+						<ul>
+							<li><a href="#"><img src="img/memberCenter/全部订单.png"/></a></li>
+							<li><a href="#">全部订单</a></li>
+							<li><a href="#">查看全部订单</a></li>
+							<li><a href="#"><img src="img/memberCenter/菜单 拷贝.png"/></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="toolbar">
+				<div class="weui_tabbar">
+			        <a href="rmindex.html" class="weui_tabbar_item">
+			            <div class="weui_tabbar_icon">
+			                <img src="img/rmindex/首页1.png" alt="">
+			            </div>
+			            <p class="weui_tabbar_label">首页</p>
+			        </a>
+			        <a href="classify.html" class="weui_tabbar_item">
+			            <div class="weui_tabbar_icon">
+			                <img src="img/rmindex/分类.png" alt="">
+			            </div>
+			            <p class="weui_tabbar_label">分类</p>
+			        </a>
+			        <a href="shopcar.html" class="weui_tabbar_item">
+			            <div class="weui_tabbar_icon">
+			                <img src="img/rmindex/9.png" alt="">
+			            </div>
+			            <p class="weui_tabbar_label">购物车</p>
+			        </a>
+			        <a href="javascript:;" class="weui_tabbar_item">
+			            <div class="weui_tabbar_icon">
+			                <img src="img/rmindex/会员中心1.png" alt="">
+			            </div>
+			            <p class="weui_tabbar_label" style="color: #ff8e0f;">会员中心</p>
+			        </a>
+			    </div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- jquery手势插件 -->
+	<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		/**
+		 * 切换类型
+		 */
+		$(".left span").swipe({
+			tap : function() {
+				$(this).addClass("onselect").siblings().removeClass("onselect");
+				$("#" + $(this).data("type")).show().siblings(".right").hide();
+			}
+		});
+		
+		/**
+		 * 查询
+		 */
+		$('.page').on('focus', '#search_input', function () {
+            var $weuiSearchBar = $('#search_bar');
+            $weuiSearchBar.addClass('weui_search_focusing');
+        }).on('blur', '#search_input', function () {
+            var $weuiSearchBar = $('#search_bar');
+            $weuiSearchBar.removeClass('weui_search_focusing');
+            if ($(this).val()) {
+                $('#search_text').hide();
+            } else {
+                $('#search_text').show();
+            }
+        }).on('input', '#search_input', function () {
+            var $searchShow = $("#search_show");
+            if ($(this).val()) {
+                $searchShow.show();
+            } else {
+                $searchShow.hide();
+            }
+        }).on('touchend', '#search_cancel', function () {
+            $("#search_show").hide();
+            $('#search_input').val('');
+        }).on('touchend', '#search_clear', function () {
+            $("#search_show").hide();
+            $('#search_input').val('');
+        });
+        
+        $("#search_show .weui_cell").swipe({
+        	tap : function() {
+        		 $("#search_show").hide();
+        	}
+        });
+	</script>
+</html>
