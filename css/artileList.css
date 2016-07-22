@@ -1,0 +1,31 @@
+.articleList .article{
+	overflow-y:hidden;
+}
+
+.article-list{
+	padding: 10px;
+	border-bottom:1px solid #CCCCCC ;
+}
+.article .list-title{
+	display: flex;
+	flex: 1 1 auto;
+	padding-bottom: 5px;
+}
+.article .list-title h4{
+	width: 75%;
+	font-size: 14px;
+	text-align: left;
+}
+.article .list-title h4 a{
+	color: #000000;
+}
+.article .list-title p{
+	width: 25%;
+	font-size: 12px;
+	color: #CCCCCC;
+}
+.article .list-content{
+	font-size: 12px;
+	padding-right: 10px;
+	color: #666666;
+}

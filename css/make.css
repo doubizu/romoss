@@ -1,8 +1,8 @@
 /*定制产品*/
-.page .navbar .footer{
+.makenav .footer{
 	position: relative;
 }
-.page .navbar .footer .span-shopcar{
+.makenav .footer .span-shopcar{
 	display: block;
 	width:12px;
 	height: 12px;
@@ -14,7 +14,7 @@
 	right:14px;
 	font-size: 8px;
 }
-.page .navbar .footer .span-1{
+.span-1{
 	display: block;
 	color: #FFFFFF;
 	font-size: 7px;
@@ -27,91 +27,79 @@
     opacity: 1;
     background: #ff8e0f;
 }
-.content .make-bananr img{
+ .make-bananr img{
 	width: 100%;
 	display: block;
 }
-.content .make-top{
+.make-top{
 	height: 8px;
 	background: #f3f3f3;
 }
-.content .make-p{
+.make-p{
 	padding-top: 15px;
 	padding-left: 10px;
 	height: 105px;
 }
-.content .make-p p{
+.make-p p{
 	padding-right: 15px;
 	font-size: 14px;
 }
-.content .make-p .make-span{
+.make-p .make-span{
 	font: 16px/1.5 "Arial", "sans-serif", "微软雅黑", "宋体", "Tahoma";
 	color: #eb7430;
 }
-.content .make-p p span{
+.make-p p span{
 	color: #959595;
 	padding-right: 15px;
 }
-.content .make-color{
+.make-color{
 	height: 86px;
 	padding-left: 10px;
 }
-.content .make-color p{
+.make-color p{
 	font-size: 14px;
 	padding-bottom: 5px;
 	padding-top: 10px;
 }
-.content .make-color p span{
+.make-color p span{
 	padding: 8px;
 	border: 1px solid #b8b8b8;
 	margin-right: 10px;
 	border-radius:10% ;
 }
-/*.content .make-color p span i{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 12px;
-    height: 12px;
-    overflow: hidden;
-    text-indent: -99em;
-    display: block;
-    background-repeat: no-repeat;
-  /*  background-position: -62px -16px;*/
-/*}*/
-.content .make-color p span a{
+.make-color p span a{
 	color:#b8b8b8;
 }
-.content .make-color p span a:hover{
+.make-color p span a:hover{
 	color: #9dd3d7;
 }
-.content .make-color p span:hover{
+.make-color p span:hover{
 	border: 2px solid #9dd3d7;
 }
 
-.content .make-border{
+.make-border{
 	height: 5px;
 	background: #f3f3f3;
 }
-.content .make-number{
+.make-number{
 	display: flex;
 	height: 60px;
 	flex:1;
 	line-height: 60px;
 	padding-left: 10px;
 }
-.content .make-number .number-left{
+.make-number .number-left{
 	order: -1;
 	width: 60%;
 }
-.content .make-number .make-button{
+.make-number .make-button{
 	width:40%;
 	padding-top: 15px;
 	padding-right: 10px;
 	display: flex;
 	flex: 1;
 }
-.content .make-number .make-button a {
+.make-number .make-button a {
 	display: block;
 	height: 30px;
 	line-height: 30px;
@@ -121,7 +109,7 @@
 	color: #000;
 	float: right;
 }
-.content .make-number .make-button #number{
+.make-number .make-button #number{
 	width: 30px;
 	height: 29px;
 	border: none;
@@ -129,15 +117,15 @@
 	border-bottom: 1px solid #E6E6E6;
 	
 }
-.content .make-number .make-button a:active {
+.make-number .make-button a:active {
 	background-color: #04a7b0;
 }
 
-.content .make-number .make-button a:nth-child(odd) {
+.make-number .make-button a:nth-child(odd) {
 	border: 1px solid #e6e6e6;
 }
 
-.content .make-number .make-button a:nth-child(even) {
+.make-number .make-button a:nth-child(even) {
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
 }
@@ -157,15 +145,15 @@
 .weui_navbar_item:hover{
 	color: #30b4b9;
 }
-.content .introduce{
+.introduce{
 	background: #f3f3f3;
 	padding: 10px 0px;
 }
-.content .introduce img{
+.introduce img{
 	width: 100%;
 }
 
-.content .parameter-list{
+.parameter-list{
 	display: flex;
 	flex: 1 1 auto;
 	height: 60px;
@@ -173,27 +161,27 @@
 	padding-left: 10px;
 	border-bottom: 1px solid #CCCCCC;
 }
-.content .parameter-list:last-child{
+.parameter-list:last-child{
 	margin-bottom: 15px;
 }
-.content .parameter-list p{
+.parameter-list p{
 	padding-right: 15px;
 }
-.content .parameter-list span{
+.parameter-list span{
 	color: #CCCCCC;
 }
 
 
 
-.content .comment-list{
+.comment-list{
 	width: 100%;
 	height: 170px;
 	border-bottom: 1px solid #CCCCCC;
 }
-.content .comment-list:last-child{
+.comment-list:last-child{
 	margin-bottom: 15px;
 }
-.content .comment-aa{
+.comment-aa{
 	display: flex;
 	flex: 1 1 auto;
 	padding-top: 20px;
@@ -216,14 +204,14 @@
   order: -1;
   padding-left: 10px;
 }
-.content .comment-aa:last-child{
+.comment-aa:last-child{
 	margin-bottom: 30px;
 }
-.content .comment-list p{
+.comment-list p{
 	padding-left: 10px;
 	padding-top: 10px;
 }
-.content .comment-list .comment-p{
+.comment-list .comment-p{
 	text-align: right;
 	color: #CCCCCC;
 	padding-right: 10px;

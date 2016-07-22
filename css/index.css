@@ -2,19 +2,19 @@
  * 首页轮播产品信息
  */
 
-.page .content .banner {
+.banner {
 	height: 50px;
 	text-align: center;
 	background-color: #fe8e0e;
 	color: white;
 }
 
-.page .content .banner div {
+.banner div {
 	width: 150px;
 	margin: auto;
 }
 
-.page .content .banner div:nth-child(2) {
+.banner div:nth-child(2) {
 	border-top: 1px solid white;
 	display: block;
 }
@@ -38,14 +38,14 @@
 	display: block;
 }
 
-.page .content .baby {
+.baby {
 	display: flex;
 	height: 190px;
 	margin: 30px 0px;
 	flex: 1;
 	overflow: hidden;
 }
-.page .content .baby .baby-right {
+.baby .baby-right {
 	width: 65%;
 	flex: 1;
 	background: url(../img/bg2.png);
@@ -54,28 +54,28 @@
 	background-position: right top;
 	padding-top: 40px;
 }
-.page .content .baby .baby-right div{
+.baby .baby-right div{
 	display: flex;
 	flex: 1;
 	justify-content:flex-end;
 	padding-right: 10px;
 	
 }
-.page .content .baby .baby-right div span{
+.baby .baby-right div span{
 	color: #FFFFFF;
 	padding: 40px 5px;
 }
-.page .content .baby .baby-left {
+.baby .baby-left {
 	order: -1;
 	width: 35%;
 }
-.page .content .baby .baby-left div{
+.baby .baby-left div{
 	width: 180px;
 	display: flex;
 	flex: 1;
 	padding-left: 10px;
 }
-.page .content .baby .baby-left div p{
+.baby .baby-left div p{
 	margin-top: -25px;
 	height: 25px;
 	font-weight: bold;
@@ -84,24 +84,24 @@
 	font-size: 14px;
 	width: 90px;
 }
-.page .content .baby .baby-left p{
+.baby .baby-left p{
 	padding-top: 30px;
 	padding-left: 10px;
 	width: 110px;
 	font-size: 13px;
 }
-.page .content .baby .baby-left div p a{
+.baby .baby-left div p a{
 	color: #ff8e0f;
 	font-size: 14px;
 }
-.page .content .Selfie {
+.Selfie {
 	display: flex;
 	height: 190px;
 	margin: 30px 0px;
 	flex: 1;
 	overflow: hidden;
 }
-.page .content .Selfie .Selfie-left  {
+.Selfie .Selfie-left  {
 	width: 65%;
 	flex: 1;
 	background: url(../img/bg1.png);
@@ -111,24 +111,24 @@
 	padding-top:40px;
 	order: -1;
 }
-.page .content .Selfie .Selfie-left div{
+.Selfie .Selfie-left div{
 	display: flex;
 	flex: 1;
 	padding-left: 10px;
 }
-.page .content .Selfie .Selfie-left div span{
+.Selfie .Selfie-left div span{
 	padding-top: 40px;
 	color: #FFFFFF;
 }
-.page .content .Selfie .Selfie-right {
+.Selfie .Selfie-right {
 	width: 35%;
 }
-.page .content .Selfie .Selfie-right .Selfie-a{
+.Selfie .Selfie-right .Selfie-a{
 	width: 180px;
 	display: flex;
 	flex: 1;	
 }
-.page .content .Selfie .Selfie-right .Selfie-a p{
+.Selfie .Selfie-right .Selfie-a p{
 	margin-top: -25px;
 	height: 25px;
 	font-weight: bold;
@@ -137,43 +137,33 @@
 	width: 90px;
 	margin-left: -13px;
 }
-.page .content .Selfie .Selfie-right .Selfie-a img{
+.Selfie .Selfie-right .Selfie-a img{
 	padding-right: 10px;
 }
-.page .content .Selfie .Selfie-right p{
+.Selfie .Selfie-right p{
 	padding-top: 30px;
 	width: 110px;
 	font-size: 13px;
 }
-.page .content .Selfie .Selfie-right div p a{
+.Selfie .Selfie-right div p a{
 	color: #ff8e0f;
 	font-size: 14px;
 }
-.page .content .Designer{
+.Designer{
 	text-align: center;
 	color: #04a7b0;
 	font-size: 18px;
 	font-weight: bold;
 }
-.page .content .Designers{
+.Designers{
 	color: #94b5be;
 	text-align: center;
 	font-family: arial;
 	font-size: 12px;
 	padding-bottom: 8px;
 }
-.page .content .Designer-img{
+.Designer-img{
 	width: 100%;
 	display: block;
 	margin-bottom: 20px;
-}
-
-/**
- * toast弹框调整 
- */
-.weui_toast {
-	width: 14em;
-	min-height: 1em;
-	margin-left: -7em;
-	padding: 20px 0px;
 }
