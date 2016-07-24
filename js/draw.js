@@ -25,7 +25,7 @@
 		bitmap.image = img;
 		
 		if( img.width > this.stage.canvas.width ) {
-			 bitmap.scaleX = bitmap.scaleY = this.stage.canvas.width / img.width;
+			bitmap.scaleX = bitmap.scaleY = this.stage.canvas.width / img.width;
 		}
 		
 		//设置点击区域
@@ -45,7 +45,7 @@
 		
 		//切换当前组件
 		this.__changeCurrent(bitmap);
-		this.stage.addChild(bitmap);
+		this.stage.addChildAt(bitmap,0);
 		
 		return this;
 	}
@@ -73,7 +73,7 @@
 	
 		//切换激活对象
 		this.__changeCurrent(text);
-		this.stage.addChild(text);
+		this.stage.addChildAt(text,this.stage.children.length);
 		
 		return this;
 	}
@@ -121,13 +121,15 @@
 	
 	//旋转
 	Draw.prototype.setRotation = function( deg ) {
-		this.current.rotation = deg;
-		
 		//设置点击区域
-		var bounds = this.current.getBounds();
-		var hit = new createjs.Shape();
-	    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
-	    this.current.hitArea = hit;
+		var bounds = this.__setHitBound();
+    	this.current.regX = bounds.width / 2   || 0;
+    	this.current.regY = bounds.height / 2 || 0;
+    	
+	    this.current.x = this.current.x || this.current.regX * this.current.scaleX;
+	    this.current.y = this.current.y || this.current.regY * this.current.scaleY;
+	    
+	    this.current.rotation = deg;
 	}
 	Draw.prototype.getRotation = function() {
 		return this.current.rotation;
@@ -148,10 +150,7 @@
 		this.current.font = arr.join(" ");
 	
 		//设置点击区域
-		var bounds = this.current.getBounds();
-		var hit = new createjs.Shape();
-	    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
-	    this.current.hitArea = hit;
+		this.__setHitBound();
 	}
 	Draw.prototype.getSize = function() {
 		return this.current.font.split(" ")[0];
@@ -183,13 +182,11 @@
 		evt.target.diffx = evt.stageX - evt.target.x;
 		evt.target.diffy = evt.stageY - evt.target.y;
 		
-		this.stage.addChild(evt.target);
 		//切换激活对象
 		this.__changeCurrent(evt.target);
 	}
 	
 	Draw.prototype.__dragmove = function(evt){
-	    this.stage.addChild(evt.target); 
 	    evt.target.x = evt.stageX - evt.target.diffx;
 	    evt.target.y = evt.stageY - evt.target.diffy;
 	}
@@ -209,5 +206,16 @@
 	        this.current.alpha = 1;
 	        this.__firechange();
 	    }
+	}
+	
+	Draw.prototype.__setHitBound = function() {
+		if( this.current ) {
+			//设置点击区域
+			var bounds = this.current.getBounds();
+			var hit = new createjs.Shape();
+		    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
+		    this.current.hitArea = hit;
+		    return bounds;
+		}
 	}
 }));

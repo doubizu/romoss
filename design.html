@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				
-				<input type="file" id="upfile" style="display:none;" accept="image/jpg,image/jpeg,image/png,image/gif" multiple/>
+				<input type="file" id="upfile" style="display:none;" multiple/>
 			</div>
 			<div class="toolbar">
 				<div class="weui_navbar">
@@ -370,7 +370,8 @@
 		//确认文字弹窗
 		confirmDialog.find(".primary").swipe({
 			tap : function() {
-				 curdraw.addText(confirmDialog.find(".weui_textarea").val());
+				curdraw.addText(confirmDialog.find(".weui_textarea").val());
+				confirmDialog.find(".weui_textarea").val("");
 				confirmDialog.hide();
 			}
 		});
