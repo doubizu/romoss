@@ -141,17 +141,56 @@
 		</div>
 		
 		<script type="text/html" id="tmp_image">
-			<ul class="imgset">
-				<li><img src="img/png/1.png"/></li>
-				<li><img src="img/png/2.png"/></li>
-				<li><img src="img/png/3.png"/></li>
-				<li><img src="img/png/4.png"/></li>
-				<li><img src="img/png/5.png"/></li>
-				<li><img src="img/png/6.png"/></li>
-				<li><img src="img/png/7.png"/></li>
-				<li><img src="img/png/8.png"/></li>
-				<li><img src="img/png/9.png"/></li>
-			</ul>
+			<div class="weui_tab">
+		        <div class="weui_navbar">
+		            <div class="weui_navbar_item weui_bar_item_on" data-index="0">
+		            	图片分类
+		            </div>
+		            <div class="weui_navbar_item" data-index="1">
+		            	图片分类
+		            </div>
+		            <div class="weui_navbar_item" data-index="2">
+		            	图片分类
+		            </div>
+		        </div>
+		        <div class="weui_tab_bd">
+					<ul class="imgset">
+						<li><img src="img/png/1.png"/></li>
+						<li><img src="img/png/2.png"/></li>
+						<li><img src="img/png/3.png"/></li>
+						<li><img src="img/png/4.png"/></li>
+						<li><img src="img/png/5.png"/></li>
+						<li><img src="img/png/6.png"/></li>
+						<li><img src="img/png/7.png"/></li>
+						<li><img src="img/png/8.png"/></li>
+						<li><img src="img/png/9.png"/></li>
+					</ul>
+					
+					<ul class="imgset" style="display: none;">
+						<li><img src="img/png/1.png"/></li>
+						<li><img src="img/png/2.png"/></li>
+						<li><img src="img/png/3.png"/></li>
+						<li><img src="img/png/4.png"/></li>
+						<li><img src="img/png/5.png"/></li>
+						<li><img src="img/png/6.png"/></li>
+						<li><img src="img/png/7.png"/></li>
+						<li><img src="img/png/8.png"/></li>
+						<li><img src="img/png/9.png"/></li>
+					</ul>
+					
+					<ul class="imgset" style="display: none;">
+						<li><img src="img/png/1.png"/></li>
+						<li><img src="img/png/2.png"/></li>
+						<li><img src="img/png/3.png"/></li>
+						<li><img src="img/png/4.png"/></li>
+						<li><img src="img/png/5.png"/></li>
+						<li><img src="img/png/6.png"/></li>
+						<li><img src="img/png/7.png"/></li>
+						<li><img src="img/png/8.png"/></li>
+						<li><img src="img/png/9.png"/></li>
+					</ul>
+		        </div>
+		    </div>
 		</script>
 		
 		<script type="text/html" id="tmp_zoom">
@@ -255,13 +294,26 @@
 			tap : function() {
 				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_image").html());
 				hideActionSheet().then(function(){
-					actionsheet.addClass("weui_actionsheet_toggle");
+					actionsheet.addClass("weui_actionsheet_toggle");//显示上拉
+					
+					//绑订图片事件
 					$(".imgset li img").unbind().swipe({
 						tap : function() {
 							loadImg($(this).attr("src")).then(function( img ){
 								curdraw.addBitmap(img);
 			                    hideActionSheet();
 							});
+						}
+					});
+					
+					//绑订切换
+					$(".weui_tab .weui_navbar .weui_navbar_item").unbind().swipe({
+						tap :function() {
+							var index = $(this).data("index");
+							$(this).addClass("weui_bar_item_on").siblings(".weui_navbar_item")
+								   .removeClass("weui_bar_item_on");
+							$(".weui_tab .weui_tab_bd .imgset").eq(index).show().siblings(".imgset")
+								   .hide();
 						}
 					});
 				});

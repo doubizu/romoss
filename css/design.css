@@ -42,6 +42,7 @@
 .polymos {
     border : 1px solid #000000;
     border-radius: 20px;
+    background: url(../img/design/bg.png) center center no-repeat;
 }
 
 /**
@@ -50,16 +51,17 @@
 .imgset {
 	list-style: none;
     display: flex;
-    flex-flow: row nowrap;
-    overflow-x: scroll;
+    height: 50vh;
+    flex-flow: row wrap;
+    overflow-y: scroll;
 }
 .imgset li {
-    height: 100px;
-    flex: 0 0 auto;
+    flex: 0 0 45%;
+    border: 1px solid #e6e6e6;
+    margin: 5px;
 }
 .imgset li img{
-    height: 90px;
-    margin: 0px 5px;
+	width: 100%;
 }
 
 /**
@@ -83,4 +85,9 @@
     padding: 0 0 0 5px;
     font-size: 30px;
     font-weight: bold;
+}
+
+.weui_navbar_item.weui_bar_item_on {
+	background-color: transparent;
+	border-bottom: 1px solid #04a7b0;
 }
