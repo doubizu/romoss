@@ -1,0 +1,32 @@
+
+.Editaddress-a,.Editaddress-b{
+	margin-top: 10px;
+}
+.Editaddress-b{
+	margin-bottom: 20px;
+}
+.Editaddress-a .weui_cells,.Editaddress-b .weui_cells{
+	margin-top: 0px;
+}
+.Editaddress-a .editjiedao{
+	height: 50px;
+}
+.Editaddress-a .editjiedao textarea{
+	font-size: 14px;
+	color: #999999;
+	padding-top: 10px;
+	border: none;
+	margin-top: 5px;
+	resize: none;
+}
+.Editaddress-a  p,.Editaddress-b .weui_cell_hd{
+	color: #666666;
+}
+
+.Editaddress-a input,select{
+	height: 30px;
+	border: none;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #999999;
+}

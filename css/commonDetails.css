@@ -1,9 +1,9 @@
 
 .toolbar .toolbal-div{
-	width: 20%;
 	border-right: 1px solid #04a7b0;
 	text-align: center;
 	position: relative;
+	padding: 0 5px;
 }
 .toolbar .toolbal-div .toolbar-span{
  	display: block;

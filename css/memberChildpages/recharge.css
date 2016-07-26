@@ -1,0 +1,59 @@
+.recharge{
+	background: #FFFFFF;
+	
+}
+.recharge-a{
+	width: 95%;
+	margin: 6px auto;
+}
+.recharge-a p{
+	padding-top: 20px;
+	color: #999999;
+	padding-bottom: 10px;
+}
+.recharge-a .recharge-input{
+	height: 50px;
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	border-radius:2% ;
+	position: relative;
+}
+.recharge-a .recharge-input input{
+	display: block;
+	height: 50px;
+	width: 100%;
+	border: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	font-size: 14px;
+	color: #666666;
+}
+.recharge-a .recharge-input span{
+	display: block;
+	position: absolute;
+	top: 30%;
+	right: 5px;
+}
+.recharge-a ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	list-style: none;
+}
+.recharge-a ul li{
+	flex: 1 1 20%;
+	border: 1px solid #CCCCCC;
+	margin: 10px 4px;
+	text-align: center;
+	border-radius:5% ;
+	color: #999999;
+}
+.recharge-a ul li:hover{
+	background: #04a7b0;
+	border: 1px solid #04a7b0;
+	color: #FFFFFF;
+}

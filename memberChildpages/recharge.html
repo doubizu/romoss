@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		<link rel="stylesheet" type="text/css" href="../css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/memberChildpages/recharge.css" />
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="navbar makenav">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
+				<span class="body">
+					充值
+				</span>
+				<span class="footer">
+				</span>
+			</div>
+			<div class="content background">
+				<div class="row recharge">
+					<div class="recharge-a">
+						<p>请输入充值金额</p>
+						<div class="recharge-input">
+							<input type="text" name="" id="text" value="" />
+							<span id="re-span">元</span>
+						</div>
+						<ul id="rec-ul">
+							<li>50元</li>
+							<li>100元</li>
+							<li>200元</li>
+							<li>300元</li>
+							<li>500元</li>
+						</ul>
+					</div>
+					<div class="row method ">
+						<a href="# ">微信支付</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript ">
+			window.onload = function() {
+				var text1 = document.getElementById("text");
+				var span = document.getElementById("re-span")
+				var text2 = document.getElementById("rec-ul").getElementsByTagName("li");
+				for (var i = 0; i < text2.length; i++) {
+					text2[i].onclick = function() {
+						text1.value = parseInt(this.innerHTML);
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

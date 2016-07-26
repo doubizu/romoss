@@ -1,0 +1,26 @@
+.goods-a{
+	margin: 10px 0px;
+}
+.goods-b{
+	background: #FFFFFF;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	padding: 10px;
+	color: #666666;
+}
+.goods-b h4{
+	padding-right: 10px;
+}
+.goods-b img{
+	padding: 0px 3px;
+}
+.goods-c,.goods-d{
+	margin-top: -10px;
+}
+.goods-c textarea{
+	font-size: 13px;
+	height: 120px;
+}

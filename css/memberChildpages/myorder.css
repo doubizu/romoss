@@ -1,0 +1,26 @@
+.myorder-nav{
+	background: #FFFFFF;
+	margin: 10px 0px;
+}
+.myorder-nav ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	list-style: none;
+}
+.myorder-nav ul li{
+	flex: 1 1 20%;
+	text-align: center;
+	padding: 10px 0px;
+}
+.myorder-nav ul li a{
+	color: #666666;
+}
+.myorde-rnav-li{
+	border-bottom: 2px solid #ff771b;
+}
+.myorder-nav ul .myorde-rnav-li a{
+	color:#ff771b;
+}

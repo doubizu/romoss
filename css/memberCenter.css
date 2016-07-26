@@ -1,86 +1,197 @@
-.memberCenter{
+.memberCenter {
 	background: #eeeeee;
 }
-.memberCenter-header{
-	height: 190px;
+
+.memberCenter-header {
 	background: #04a7b0;
 }
-.memberCenter-header .menber-top{
+
+.memberCenter-header .menber-top,
+.memberCenter-header ul,
+.memberCenter-border,
+.orderform .orderform-a ul,.command .command-a ul{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	flex: 1 1 auto;
+}
+
+/*头像那一部分*/
+.memberCenter-header .menber-top {
 	height: 120px;
 	padding-bottom: 10px;
 }
- .menber-top .menber-tou{
- 	flex: 1 1 30%;
- 	padding-top: 30px;
- 	text-align: right;
- }
- .menber-top .menber-center{
- 	flex: 1 1 60%;
- 	padding-top: 40px;
- 	line-height: 30px;
- 	padding-left: 10px;
- 	color: #FFFFFF;
- }
- .menber-top .menber-center p{
- 	font-size: 14px;
- }
- .menber-top .menber-right{
- 	flex: 1 1 10%;
- 	padding-top: 50px;
- 	text-align: center;
- }
-.memberCenter-header ul{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	flex: 1 1 auto;
+.memberCenter-header .menber-top img{
+	border-radius:50%;
+}
+.menber-top .menber-tou {
+	flex: 1 1 30%;
+	padding-top: 30px;
+	text-align: right;
+}
+.menber-top .menber-center {
+	flex: 1 1 60%;
+	padding-top: 40px;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #FFFFFF;
+}
+
+.menber-top .menber-center p {
+	font-size: 14px;
+}
+
+.menber-top .menber-right {
+	flex: 1 1 10%;
+	padding-top: 50px;
+	text-align: center;
+}
+
+
+/*导航条*/
+.memberCenter-header ul,
+.orderform .orderform-a ul,.command .command-a ul{
 	list-style: none;
 }
-.memberCenter-header ul a{
+
+.memberCenter-header ul a {
 	color: #FFFFFF;
 	font-size: 14px;
 }
-.memberCenter-header ul span{
+
+.memberCenter-header ul span {
 	display: block;
 }
-.memberCenter-header ul li{
+
+.memberCenter-header ul li {
 	flex: 1 1 33.3%;
 	text-align: center;
 	background: #04969e;
-	padding: 6px 0px;
+	padding: 3px 0px;
 	margin: 0px 1px;
 }
-.memberCenter-border{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	flex: 1 1 auto;
-	height: 65px;
+
+.memberCenter-border {
+	margin-bottom: 15px;
 }
-.memberCenter-border div{
+
+.memberCenter-border div {
 	flex: 1 1 50%;
 	text-align: center;
 	padding-top: 15px;
 }
-.memberCenter-border div img{
+
+.memberCenter-border div img {
 	width: 80%;
 }
-.memberCenter-border div p{
+
+.memberCenter-border div p {
 	margin-top: -35px;
 	color: #04A7B0;
 }
-.orderform{
+
+
+/*全部订单*/
+.orderform {
 	height: 130px;
 	background: #FFFFFF;
 }
-.orderform .orderform-a{
+
+.orderform .orderform-a {
 	margin-left: 10px;
 	height: 130px;
+}
+
+.orderform .orderform-a ul:first-child {
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.orderform .orderform-a ul img{
+	padding-top: 10px;
+}
+
+.orderform .orderform-a ul li:nth-child(1),
+.orderform .orderform-a ul li:nth-child(4) {
+	flex: 1 1 15%;
+}
+
+.orderform .orderform-a ul li:nth-child(2),
+.orderform .orderform-a ul li:nth-child(3) {
+	flex: 1 1 35%;
+}
+
+.orderform .orderform-a ul li:nth-child(2) a {
+	font-size: 16px;
+	color: #666666;
+}
+
+.orderform .orderform-a ul li:nth-child(3){
+	text-align: right;
+}
+
+.orderform .orderform-a ul li:nth-child(3) a {
+	font-size: 14px;
+	color: #cccccc;
+}
+
+.orderform .orderform-a ul li:nth-child(4) {
+	text-align: center;
+	padding-top: 5px;
+}
+.orderform .orderform-a ul:last-child li:nth-child(4) {
+	padding-top: 0px;
+}
+
+.orderform .orderform-a ul:last-child {
+	height: 70px;
+}
+
+.orderform .orderform-a ul:last-child li {
+	flex: 1 1 25%;
+	text-align: center;
+}
+.orderform .orderform-a ul:last-child li img{
+	width: 25px;
+}
+.orderform .orderform-a ul:last-child li p{
+	font-size: 14px;
+	color: #999999;
+}
+
+
+/*我的足迹,我的评价,收货地址*/
+.command{
+	background: #FFFFFF;
+	margin:10px 0px 15px 0px;
+}
+.command .command-a{
+	margin-left: 10px;
+}
+.command .command-a ul{
+	border-bottom: 1px solid #CCCCCC;
+	height: 52px;
+	line-height: 40px;
+	padding-bottom: 2px;
+}
+.command .command-a ul li:nth-child(1),.command .command-a ul li:nth-child(3){
+	flex: 1 1 15%;
+}
+.command .command-a ul li:nth-child(2){
+	flex: 1 1 70%;
+	padding-top: 8px;
+	font-size: 16px;
+	color: #666666;
+}
+.command .command-a ul li:nth-child(3){
+	text-align: center;
+	padding-top: 5px;
+}
+.command .command-a ul img{
+	padding-top: 10px;
+}
+.command .command-a ul:last-child{
+	border: none;
 }

@@ -123,7 +123,7 @@
 	Draw.prototype.setRotation = function( deg ) {
 		//设置点击区域
 		var bounds = this.__setHitBound();
-    	this.current.regX = bounds.width / 2   || 0;
+    	this.current.regX = bounds.width / 2  || 0;
     	this.current.regY = bounds.height / 2 || 0;
     	
 	    this.current.x = this.current.x || this.current.regX * this.current.scaleX;

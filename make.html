@@ -49,11 +49,11 @@
 				<div class="row make-top"></div>
 				<div class="row make-color">
 					<p>颜色</p>
-					<p>
-						<span><a href="#">白色</a></span>
-						<span><a href="#">粉色</a></span>
-						<span><a href="#">天蓝色</a></span>
-					</p>
+					<ul id="makeul">
+						<li>白色</li>
+						<li>粉色</li>
+						<li>天蓝色</li>
+					</ul>
 				</div>
 				<div class="row make-border"></div>
 				<div class="row make-number">
@@ -186,10 +186,14 @@
 			<div class="toolbar">
 				<div class="weui_navbar">
 					<div class="weui_navbar_item" id="problem">
-						<img src="img/chengjianwenti.png" />&nbsp;常见问题
+						<a href="#">
+							<img src="img/chengjianwenti.png" />&nbsp;常见问题
+						</a>
 					</div>
-					<div class="weui_navbar_item weui_bar_item_on" id="design">
-						<img src="img/woyaodingz.png" />&nbsp;我要定制
+					<div class="weui_navbar_item weui_bar_item_on " id="design">
+						<a href="#">
+							<img src="img/woyaodingz.png" />&nbsp;我要定制
+						</a>
 					</div>
 				</div>
 			</div>
@@ -206,7 +210,7 @@
 					paginationClickable: true,
 					spaceBetween: 30,
 					centeredSlides: true,
-//					autoplay: 3000,
+					//					autoplay: 3000,
 					autoplayDisableOnInteraction: false
 				});
 				$('.weui_tab').on('click', '.weui_navbar_item', function() {
@@ -229,20 +233,23 @@
 						window.location.href = "make.html";
 					}
 				});
-				$(".Tabs").each(function(i){
-					$(this).click(function(){
-						$(".Tabs_box").each(function(){
+				$(".Tabs").each(function(i) {
+					$(this).click(function() {
+						$(".Tabs_box").each(function() {
 							$(this).hide();
 						});
 						$(".Tabs_box").eq(i).show();
 					})
 				})
-				
+
 				$("#design").swipe({
-					tap : function() {
+					tap: function() {
 						window.location.href = "design.html";
 					}
 				});
+				$("#makeul li").click(function() {
+					$(this).addClass('cur').siblings('.cur').removeClass('cur');
+				})
 			});
 		</script>
 	</body>

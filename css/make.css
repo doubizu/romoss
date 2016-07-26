@@ -61,19 +61,21 @@
 	padding-bottom: 5px;
 	padding-top: 10px;
 }
-.make-color p span{
-	padding: 8px;
+.make-color ul{
+	list-style: none;
+}
+.make-color ul li{
+	float: left;
+	padding: 5px;
 	border: 1px solid #b8b8b8;
 	margin-right: 10px;
-	border-radius:10% ;
-}
-.make-color p span a{
+	border-radius:10%;
 	color:#b8b8b8;
 }
-.make-color p span a:hover{
+.make-color li:hover{
 	color: #9dd3d7;
 }
-.make-color p span:hover{
+.make-color .cur{
 	border: 2px solid #9dd3d7;
 }
 

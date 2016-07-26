@@ -51,7 +51,15 @@
 	font-size: 24px;
 	color: #CCCCCC;
 }
-
+.carcellbd .productinfo .buttongroup #number{
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	text-align: center;
+	border-bottom: 1px solid #E6E6E6;
+	
+}
 .carcellbd .productinfo .buttongroup a:active {
 	background-color: #04a7b0;
 }

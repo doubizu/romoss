@@ -1,0 +1,41 @@
+.orderdetail-a,.orderdetail-b{
+	background: #FFFFFF;
+	margin: 10px 0px;
+	color: #666666;
+}
+.orderdetail-a{
+	padding: 10px;
+}
+.orderdetail-bb{
+	padding: 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.orderdetail-data{
+	border-bottom: 1px solid #CCCCCC;
+}
+.orderdetail-right{
+	padding: 10px;
+	text-align: right;
+}
+
+.orderdetail-c{
+	background: #FFFFFF;
+	padding: 10px;
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+.orderdetail-address{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+}
+.order-left{
+	width: 25%;
+}
+.order-right{
+	width: 75%;
+	text-align: left;
+	padding-right: 20px;
+}

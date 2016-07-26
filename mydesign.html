@@ -26,14 +26,14 @@
 			</div>
 			<div class="content">
 				<div class="weui_navbar" style="position: static;">
-			        <div class="weui_navbar_item" id="">
+			        <div class="weui_navbar_item mydesign-nav" id="">
 			        	未购买
 			        </div>
-			        <div class="weui_navbar_item weui_bar_item_on" id="">
+			        <div class="weui_navbar_item weui_bar_item_on mydesign-nav" id="">
 			        	已购买
 			        </div>
 			    </div>
-			    <div class="weui_cells weui_cells_access">
+			    <div class="weui_cells weui_cells_access mydesign-box">
 			        <a class="weui_cell designcell" href="javascript:;">
 			        	<div class="weui_cell_hd">
 			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
@@ -52,6 +52,59 @@
 			            </div>
 			        </a>
 			        <a class="weui_cell designcell" href="javascript:;">
+			        	<div class="weui_cell_hd">
+			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
+			        	</div>
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <h4>sense 2S 10000 mAh</h4>
+			                <p>
+			                	<font class="rom-money">&yen;69.00</font>
+			                	<font class="rom-price">89.00</font>
+			                </p>
+			                <p class="date">
+			                	创建日期：2016-01-01 12:12:12
+			                </p>
+			            </div>
+			            <div class="weui_cell_ft">
+			            </div>
+			        </a>
+			    </div>
+			    <div class="weui_cells weui_cells_access mydesign-box" style="display: none;">
+			        <a class="weui_cell designcell" href="javascript:;">
+			        	<div class="weui_cell_hd">
+			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
+			        	</div>
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <h4>sense 2S 10000 mAh</h4>
+			                <p>
+			                	<font class="rom-money">&yen;69.00</font>
+			                	<font class="rom-price">89.00</font>
+			                </p>
+			                <p class="date">
+			                	创建日期：2016-01-01 12:12:12
+			                </p>
+			            </div>
+			            <div class="weui_cell_ft">
+			            </div>
+			        </a>
+			        <a class="weui_cell designcell" href="javascript:;">
+			        	<div class="weui_cell_hd">
+			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
+			        	</div>
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <h4>sense 2S 10000 mAh</h4>
+			                <p>
+			                	<font class="rom-money">&yen;69.00</font>
+			                	<font class="rom-price">89.00</font>
+			                </p>
+			                <p class="date">
+			                	创建日期：2016-01-01 12:12:12
+			                </p>
+			            </div>
+			            <div class="weui_cell_ft">
+			            </div>
+			        </a>
+			         <a class="weui_cell designcell" href="javascript:;">
 			        	<div class="weui_cell_hd">
 			        		<img src="img/head.png" alt="" style="width:60px;margin-right:5px;display:block">
 			        	</div>
@@ -73,10 +126,10 @@
 			<div class="toolbar">
 				<div class="weui_navbar">
 			        <div class="weui_navbar_item" id="ding">
-			        	<img src="img/woyaodingz.png"/>&nbsp;我要订制
+			        	<a href="#"><img src="img/woyaodingz.png"/>&nbsp;我要订制</a>
 			        </div>
 			        <div class="weui_navbar_item weui_bar_item_on" id="shopcar">
-			        	<img src="img/car.png"/>&nbsp;我的购物车
+			        	<a href="#"><img src="img/car.png"/>&nbsp;我的购物车</a>
 			        </div>
 			    </div>
 			</div>
@@ -159,6 +212,18 @@
 					}
 				}
 			});
+			$('.weui_navbar').on('click', '.weui_navbar_item', function() {
+					$(this).addClass('weui_bar_item_on').siblings('.weui_bar_item_on').removeClass('weui_bar_item_on');
+
+				});
+			$(".mydesign-nav").each(function(i) {
+					$(this).click(function() {
+						$(".mydesign-box").each(function() {
+							$(this).hide();
+						});
+						$(".mydesign-box").eq(i).show();
+					})
+				})
 		});
 	</script>
 </html>

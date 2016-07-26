@@ -70,12 +70,19 @@ html {
 	width: 20px;
 	vertical-align: top;
 }
-
-.page .toolbar .weui_bar_item_on {
+.page .toolbar .weui_navbar{
+	color:#04a7b0;
+}
+.page .toolbar .weui_navbar a{
+	color:#04a7b0;
+}
+.page .toolbar .weui_bar_item_on{
 	background-color: #04a7b0;
+	color: #FFFFFF;
+}
+.page .toolbar .weui_bar_item_on a{
 	color: white;
 }
-
 /**
  * 头部导航样式
  */
@@ -155,4 +162,134 @@ html {
 	display: none;
 	margin-top: 0px;
 	font-size: 14px;
+}
+
+/*钱*/
+.money{
+	font: 13px/1.5 "Arial", "sans-serif", "微软雅黑", "宋体", "Tahoma";
+}
+
+/*会员中心子页面的背景*/
+.background{
+	background: #efefef;
+}
+
+/*会员中心子页面微信支付*/
+.method{
+	height: 45px;
+	width: 95%;
+	margin: 0 auto;
+	background: #04a7b0;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 45px;
+	margin-bottom: 10px;
+}
+.method a{
+	color: #FFFFFF;
+}
+
+/*确定订单的地址和收货地址的管理的部分*/
+.address-a{
+	background: #FFFFFF;
+	margin:10px 0px;
+	padding: 10px 0px 10px 5px;
+	color: #666666;
+	
+}
+.address-a,.addressname{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+}
+.address-a .address-left{
+	flex: 1 1 80%;
+}
+.address-a .address-right{
+	flex: 1 1 10%;
+	padding-top: 20px;
+	text-align: center;
+}
+.addressname h4{
+	padding-right:20px;
+}
+.address-a .addressname p{
+	font-size: 15px;
+}
+
+/*会员中心子页面的订单页脚*/
+.firmorder .firm-footer{
+	border-top:none
+}
+.firmorder .firm-footer .weui_navbar a{
+	color:#ff771b;
+}
+
+.firmorder .firm-footer .weui_bar_item_on{
+	background-color: #ff771b;
+}
+.firmorder .firm-footer .weui_bar_item_on a{
+	color: #FFFFFF;
+}
+
+
+/*会员中心子页面的订单商品信息*/
+.order-b{
+	background: #FFFFFF;
+	padding-top: 20px;
+}
+.order-bb{
+	width: 90%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	padding-bottom: 8px;
+}
+.order-img {
+	width:20%;
+}
+.order-img img{
+	width: 60px;
+}
+.order-center{
+	width: 60%;
+	font-size: 16px;
+	color: #666666;
+	padding-left: 10px;
+}
+.order-bttom{
+	width: 20%;
+	text-align: right;
+	color: #666666;
+	line-height:30px;
+}
+.order-bttom .firmmoney{
+	font-size: 16px;
+	color: #ff771b;
+}
+
+
+/*定制协议*/
+.Customprotocol-title{
+	background: #04a7b0;
+	color: #FFFFFF;
+}
+.Customprotocol-content {
+	color:#666666;
+	border-bottom:1px solid #04a7b0 ;
+}
+.Customprotocol-content h4{
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-indent: 2em;
+	
+}
+.Customprotocol-content ol li{
+	margin-left: 15px;
 }

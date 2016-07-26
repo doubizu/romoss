@@ -10,15 +10,8 @@
 }
 
 .banner div {
-	width: 150px;
 	margin: auto;
 }
-
-.banner div:nth-child(2) {
-	border-top: 1px solid white;
-	display: block;
-}
-
 /**
  * 图片
  */
@@ -98,7 +91,7 @@
 	display: flex;
 	height: 190px;
 	margin: 30px 0px;
-	flex: 1;
+	flex: 1 1 auto;
 	overflow: hidden;
 }
 .Selfie .Selfie-left  {
@@ -120,26 +113,6 @@
 	padding-top: 40px;
 	color: #FFFFFF;
 }
-.Selfie .Selfie-right {
-	width: 35%;
-}
-.Selfie .Selfie-right .Selfie-a{
-	width: 180px;
-	display: flex;
-	flex: 1;	
-}
-.Selfie .Selfie-right .Selfie-a p{
-	margin-top: -25px;
-	height: 25px;
-	font-weight: bold;
-	border-bottom:1px solid #000000 ;
-	font-size: 14px;
-	width: 90px;
-	margin-left: -13px;
-}
-.Selfie .Selfie-right .Selfie-a img{
-	padding-right: 10px;
-}
 .Selfie .Selfie-right p{
 	padding-top: 30px;
 	width: 110px;
@@ -148,6 +121,23 @@
 .Selfie .Selfie-right div p a{
 	color: #ff8e0f;
 	font-size: 14px;
+}
+.Selfie .Selfie-right {
+	width: 35%;
+	padding-right: 10px;
+	text-align: right;
+}
+.Selfie .Selfie-right .Selfie-a{
+	display: flex;
+	flex: 1,1,auto;	
+}
+.Selfie .Selfie-right .Selfie-a p{
+	margin-top: -25px;
+	height: 25px;
+	font-weight: bold;
+	border-bottom:1px solid #000000 ;
+	font-size: 14px;
+	margin-left: -13px;
 }
 .Designer{
 	text-align: center;

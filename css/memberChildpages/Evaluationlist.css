@@ -1,0 +1,27 @@
+
+.Evaluationlist-a{
+	margin: 10px 0px;
+	background: #FFFFFF;
+}
+.Evaluationlist-a .weui_cells{
+	margin-top: 0px;
+}
+.list-xing{
+	padding: 10px;
+}
+.list-xing img{
+	width: 20px;
+}
+.list-content1{
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	color: #666666;
+}
+.list-data{
+	padding-left: 10px;
+	text-align: right;
+	padding-right: 10px;
+	font-size: 14px;
+	color: #666666;
+}
