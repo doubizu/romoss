@@ -194,11 +194,13 @@
 		</script>
 		
 		<script type="text/html" id="tmp_zoom">
-			<div class="dragdealer" id="dragdealer">
-	            <div class="handle red-bar">
-	              <span class="value"></span>%
-	            </div>
-	       </div>
+			<div class="zoom">
+				<div class="dragdealer" id="dragdealer">
+		            <div class="handle blue-bar">
+		            	<span class="value"></span>
+		            </div>
+		       </div>		
+			</div>
 		</script>
 		
 		<script type="text/html" id="tmp_textset">
@@ -384,7 +386,7 @@
 					new Dragdealer('dragdealer', {
 	        			x : width / multiple,
 						animationCallback: function(x, y) {
-						    $('#dragdealer .value').text(Math.round(x * 100));
+						    $('.zoom .value').text(Math.round(x * 100)+"%");
 						    curdraw.setScale( x * multiple,x * multiple );
 						}
 					});
