@@ -1,3 +1,9 @@
+#2016/7/28更新
+解决文字框不能输入的操作，增加预览页面功能，更改生成图片格式为png格式
+modified:   css/design.css
+modified:   design.html
+modified:   js/draw.js
+
 #2016/7/27更新
 design.html 清除手机长按触发系统操作，防止在旋转、缩放滑动时弹窗
 

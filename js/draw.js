@@ -86,7 +86,7 @@
 		
 		var that = this;
 		setTimeout( function() {
-	        d.resolve( that.stage.toDataURL("#FFFFFF","image/jpeg") );
+	        d.resolve( that.stage.toDataURL("transparent","image/png") );
 	    },300 );
 		return d.promise();
 	}

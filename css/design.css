@@ -97,6 +97,20 @@
     box-shadow: 0 0 3px;
 }
 
+.preview {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	background: url(../img/design/bg.png) center center no-repeat;
+	
+	justify-content: center;
+	align-items: center;
+	height: 82vh;
+}
+
+
 .weui_navbar_item.weui_bar_item_on {
 	background-color: transparent;
 	border-bottom: 1px solid #04a7b0;

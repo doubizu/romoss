@@ -26,7 +26,7 @@
 			</div>
 			<div class="content design">
 				<div class="left">
-					<canvas id="polymos" class="polymos" width="256px" height="450px"></canvas>
+					<canvas id="polymos" class="polymos" width="214px" height="450px"></canvas>
 				</div>
 				<div class="right">
 					<div class="item" id="image">
@@ -70,7 +70,7 @@
 					<div class="weui_navbar_item" id="make">
 						商品详情
 					</div>
-					<div class="weui_navbar_item">
+					<div class="weui_navbar_item" id="preview">
 						预览设计
 					</div>
 					<div class="weui_navbar_item weui_bar_item_on" id="shopcar">
@@ -276,6 +276,12 @@
 		    </div>
         </div>
 		</script>
+	
+		<script type="text/html" id="tmp_preview">
+			<div class="preview">
+				<img src="" alt="" id="preview_img"/>
+			</div>
+		</script>
 	</body>
 	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/easeljs-0.8.2.min.js" type="text/javascript" charset="utf-8"></script>
@@ -283,8 +289,6 @@
 	<script src="js/dragdealer.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/draw.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-	//清除手机长按
-	window.ontouchstart = function(e) { e.preventDefault(); };
 	var actionsheet = cancel = curdraw = confirmDialog = saveDialog = null;
 	
 	$(function(){
@@ -393,12 +397,28 @@
 			}
 		});
 		
+		//预览
+		$("#preview").swipe({
+			tap : function() {
+				hideActionSheet();
+				$("#loadingToast").show();
+                curdraw.save().then(function( img ) {
+                    actionsheet.find(".weui_actionsheet_menu").html($("#tmp_preview").html());
+                    actionsheet.addClass("weui_actionsheet_toggle");
+                    $("#preview_img").attr("src",img);
+                    $("#loadingToast").hide();
+                });
+			}
+		});
+		
 		$("#zoom").swipe({
 			tap : function() {
 				if( curdraw.current == null ) {
 					return;
 				}
 				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_zoom").html());
+				//清除手机长按
+				$("#dragdealer .blue-bar").get(0).ontouchstart = function(e) { e.preventDefault(); };
 				hideActionSheet().then(function(){
 					actionsheet.addClass("weui_actionsheet_toggle");
 					
@@ -427,6 +447,8 @@
 					return;
 				}
 				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_zoom").html());
+				//清除手机长按
+				$("#dragdealer .blue-bar").get(0).ontouchstart = function(e) { e.preventDefault(); };
 				hideActionSheet().then(function(){
 					actionsheet.addClass("weui_actionsheet_toggle");
 					new Dragdealer('dragdealer', {
