@@ -24,6 +24,7 @@
 		bitmap.name = name || 'bitmap' + bitmap.id;
 		bitmap.image = img;
 		
+		
 		if( img.width > this.stage.canvas.width ) {
 			bitmap.scaleX = bitmap.scaleY = this.stage.canvas.width / img.width;
 		}

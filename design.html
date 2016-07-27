@@ -263,8 +263,10 @@
 	<script src="js/dragdealer.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/draw.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+	//清除手机长按
+	window.ontouchstart = function(e) { e.preventDefault(); };
 	var actionsheet = cancel = curdraw = confirmDialog = saveDialog = null;
-
+	
 	$(function(){
 		actionsheet = $("#weui_actionsheet"); //上拉窗口
 		cancel = $("#actionsheet_cancel"); //退出上窗口
@@ -386,7 +388,7 @@
 					new Dragdealer('dragdealer', {
 	        			x : width / multiple,
 						animationCallback: function(x, y) {
-						    $('.zoom .value').text(Math.round(x * 100)+"%");
+						    $('#dragdealer .value').text(Math.round(x * 100)+"%");
 						    curdraw.setScale( x * multiple,x * multiple );
 						}
 					});
@@ -405,7 +407,7 @@
 					new Dragdealer('dragdealer', {
 	        			x : curdraw.getRotation() / 360,
 						animationCallback: function(x, y) {
-						    $('#dragdealer .value').text(Math.round(x * 100));
+						    $('#dragdealer .value').text(Math.round(x * 100) + "%");
 						    curdraw.setRotation(x * 360);
 						}
 					});
