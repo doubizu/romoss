@@ -21,7 +21,7 @@
 	
 	Draw.prototype.addBitmap = function( img, name ) {
 		var bitmap = new createjs.Bitmap(); 
-		bitmap.name = name || 'bitmap' + bitmap.id;
+		bitmap.name = name || 'bitmap';
 		bitmap.image = img;
 		
 		//设置缩放
@@ -58,7 +58,7 @@
 	Draw.prototype.addText = function( str ) {
 		str = str || "请输入";
 		var text = new createjs.Text(str,"20px Arial", "#000000");
-		text.name = 'text' + text.id;
+		text.name = 'text';
 	
 		//设置点击区域
 		var bounds = text.getBounds();
@@ -130,13 +130,6 @@
 	
 	//旋转
 	Draw.prototype.setRotation = function( deg ) {
-		//设置点击区域
-//  	console.log(this.current.x,this.current.y);
-//	    this.current.x = this.current.x || this.current.regX * this.current.scaleX;
-//	    this.current.y = this.current.y || this.current.regY * this.current.scaleY;
-//	    console.log(this.current.x,this.current.y);
-	    
-	    
 	    this.current.rotation = deg;
 	}
 	Draw.prototype.getRotation = function() {
@@ -177,6 +170,15 @@
 		evt.target.diffx = evt.stageX - evt.target.x;
 		evt.target.diffy = evt.stageY - evt.target.y;
 		
+		//将选中对象放到最上层，但不能超过文字
+		if( this.current.name == "text" ) {
+			var children = this.stage.children;
+			this.stage.swapChildren( evt.target,children[children.length-1] );
+		} else {
+			this.stage.swapChildren( evt.target, this.__getBitmapMaxIndex() );
+		}
+//		this.stage.addChild( evt.target );
+		
 		//切换激活对象
 		this.__changeCurrent(evt.target);
 	}
@@ -201,5 +203,18 @@
 	        this.current.alpha = 1;
 	        this.__firechange();
 	    }
+	}
+	
+	Draw.prototype.__getBitmapMaxIndex = function() {
+		var swap = 0;
+		var children = this.stage.children;
+		for( var i = 0;i < children.length;i++ ) {
+			if( children[i].name != "bitmap") {
+				break;
+			}
+			swap = children[i];
+		}
+		
+		return swap;
 	}
 }));
