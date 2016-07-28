@@ -24,7 +24,7 @@
 		bitmap.name = name || 'bitmap' + bitmap.id;
 		bitmap.image = img;
 		
-		//设置缩放大小
+		//设置缩放
 		if( img.width > this.stage.canvas.width ) {
 			bitmap.scaleX = bitmap.scaleY = this.stage.canvas.width / img.width;
 		}
