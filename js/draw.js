@@ -24,17 +24,21 @@
 		bitmap.name = name || 'bitmap' + bitmap.id;
 		bitmap.image = img;
 		
-		
+		//设置缩放大小
 		if( img.width > this.stage.canvas.width ) {
 			bitmap.scaleX = bitmap.scaleY = this.stage.canvas.width / img.width;
 		}
-		
 		//设置点击区域
 		var bounds = bitmap.getBounds();
 		var hit = new createjs.Shape();
 	    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
 	    bitmap.hitArea = hit;
-		
+		//设置中心点
+    	bitmap.regX = bounds.width / 2  || 0;
+    	bitmap.regY = bounds.height / 2 || 0;
+    	bitmap.x = bitmap.regX * bitmap.scaleX;
+    	bitmap.y = bitmap.regY * bitmap.scaleY;
+    	
 		//设置事件
 		var that = this;
 		bitmap.on("mousedown", function( evt ) {
@@ -55,13 +59,17 @@
 		str = str || "请输入";
 		var text = new createjs.Text(str,"20px Arial", "#000000");
 		text.name = 'text' + text.id;
-		text.x = text.y = 50;
 	
 		//设置点击区域
 		var bounds = text.getBounds();
 		var hit = new createjs.Shape();
 	    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
 	    text.hitArea = hit;
+		//设置中心点
+    	text.regX = bounds.width / 2  || 0;
+    	text.regY = bounds.height / 2 || 0;
+		text.x = text.regX + 50;
+		text.y = text.regY + 50;
 		
 		//设置事件
 		var that = this;
@@ -123,12 +131,11 @@
 	//旋转
 	Draw.prototype.setRotation = function( deg ) {
 		//设置点击区域
-		var bounds = this.__setHitBound();
-    	this.current.regX = bounds.width / 2  || 0;
-    	this.current.regY = bounds.height / 2 || 0;
-    	
-	    this.current.x = this.current.x || this.current.regX * this.current.scaleX;
-	    this.current.y = this.current.y || this.current.regY * this.current.scaleY;
+//  	console.log(this.current.x,this.current.y);
+//	    this.current.x = this.current.x || this.current.regX * this.current.scaleX;
+//	    this.current.y = this.current.y || this.current.regY * this.current.scaleY;
+//	    console.log(this.current.x,this.current.y);
+	    
 	    
 	    this.current.rotation = deg;
 	}
@@ -144,20 +151,7 @@
 		return this.current.color;
 	}
 	
-	//大小
-	Draw.prototype.setSize = function( size ) {
-		var arr = this.current.font.split(" ");
-		arr[0] = size;
-		this.current.font = arr.join(" ");
-	
-		//设置点击区域
-		this.__setHitBound();
-	}
-	Draw.prototype.getSize = function() {
-		return this.current.font.split(" ")[0];
-	}
-	
-		//字体
+	//字体
 	Draw.prototype.setFamily = function( family ) {
 		var arr = this.current.font.split(" ");
 		arr[1] = family;
@@ -207,16 +201,5 @@
 	        this.current.alpha = 1;
 	        this.__firechange();
 	    }
-	}
-	
-	Draw.prototype.__setHitBound = function() {
-		if( this.current ) {
-			//设置点击区域
-			var bounds = this.current.getBounds();
-			var hit = new createjs.Shape();
-		    hit.graphics.beginFill('#000').drawRect(0,0,bounds.width,bounds.height);
-		    this.current.hitArea = hit;
-		    return bounds;
-		}
 	}
 }));

@@ -1,4 +1,8 @@
 #2016/7/28更新
+解决旋转时图片跳位的问题
+modified:   js/draw.js
+
+#2016/7/28更新
 解决文字框不能输入的操作，增加预览页面功能，更改生成图片格式为png格式
 modified:   css/design.css
 modified:   design.html
