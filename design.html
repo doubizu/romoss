@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				
-				<input type="file" id="upfile" style="display:none;" multiple/>
+				<input type="file" id="upfile" style="display:none;"/>
 			</div>
 			<div class="toolbar">
 				<div class="weui_navbar">
@@ -358,12 +358,14 @@
 				hideActionSheet();
 				$("#upfile").unbind().change(function() {
                     var file = this.files[0];
-                    if( !file ) {
-                        return;
+                    //检测输入
+                    if( file.type == "image/png" || file.type == "image/jpg" || file.type == "image/jpeg" || file.type == "image/gif" ) {
+                    	readFile( file ).then(function( img ){
+	                    	curdraw.addBitmap(img,"upfile");
+	                    });
+                    } else {
+                    	alert("图片格式不正确!");
                     }
-                    readFile( file ).then(function( img ){
-                    	curdraw.addBitmap(img,"upfile");
-                    });
                 });
                 return $("#upfile").click();
 			}

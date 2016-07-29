@@ -1,4 +1,11 @@
+#2016/7/29下午更新
+限制上传图片格式png/gif/jpg
+modified:   changelog.md
+modified:   design.html
+
+
 #2016/7/29更新
+图层问题，旋转缩放透明
 modified:   css/design.css
 modified:   css/rmindex.css
 modified:   design.html
