@@ -171,7 +171,7 @@
 		evt.target.diffy = evt.stageY - evt.target.y;
 		
 		//将选中对象放到最上层，但不能超过文字
-		if( this.current.name == "text" ) {
+		if( evt.target.name == "text" ) {
 			var children = this.stage.children;
 			this.stage.swapChildren( evt.target,children[children.length-1] );
 		} else {
@@ -210,11 +210,11 @@
 		var children = this.stage.children;
 		for( var i = 0;i < children.length;i++ ) {
 			if( children[i].name != "bitmap") {
+				console.log(i);
 				break;
 			}
 			swap = children[i];
 		}
-		
 		return swap;
 	}
 }));
