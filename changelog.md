@@ -1,3 +1,9 @@
+#2016/7/29更新
+modified:   css/design.css
+modified:   css/rmindex.css
+modified:   design.html
+
+
 #2016/7/28更新
 解决旋转时图片跳位的问题
 modified:   js/draw.js

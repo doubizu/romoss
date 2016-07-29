@@ -420,7 +420,8 @@
 				//清除手机长按
 				$("#dragdealer .blue-bar").get(0).ontouchstart = function(e) { e.preventDefault(); };
 				hideActionSheet().then(function(){
-					actionsheet.addClass("weui_actionsheet_toggle");
+					actionsheet.addClass("weui_actionsheet_toggle").css("background-color","transparent")
+							   .find(".weui_actionsheet_menu").css("background-color","transparent");
 					
 					var multiple = 1;
 					var width = curdraw.getScale().x;
@@ -450,7 +451,8 @@
 				//清除手机长按
 				$("#dragdealer .blue-bar").get(0).ontouchstart = function(e) { e.preventDefault(); };
 				hideActionSheet().then(function(){
-					actionsheet.addClass("weui_actionsheet_toggle");
+					actionsheet.addClass("weui_actionsheet_toggle").css("background-color","transparent")
+							   .find(".weui_actionsheet_menu").css("background-color","transparent");
 					new Dragdealer('dragdealer', {
 	        			x : curdraw.getRotation() / 360,
 						animationCallback: function(x, y) {
@@ -516,7 +518,8 @@
 		var d = $.Deferred();
 		
 		isshow = true;
-		actionsheet.removeClass("weui_actionsheet_toggle");
+		actionsheet.removeClass("weui_actionsheet_toggle").css("background-color","")
+				   .find(".weui_actionsheet_menu").css("background-color","");
 		setTimeout(function(){
 			d.resolve();
 		},400);
