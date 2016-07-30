@@ -1,0 +1,22 @@
+.Modifyname-list{
+	background: #FFFFFF;
+	padding: 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	color: #666666;
+	margin-top: 10px;
+}
+.Modifyname-title{
+	width: 25%;
+}
+.Modifyname-content{
+	width: 75%;
+}
+.Modifyname-content input{
+	height: 25px;
+	border: none;
+	color: #CCCCCC;
+}

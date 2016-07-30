@@ -30,37 +30,37 @@
 				</div>
 				<div class="right">
 					<div class="item" id="image">
-						<img src="img/design/挑选美图1.png"/>
+						<img src="img/design/moto2.png" />
 						<p>选图</p>
 					</div>
 					<div class="item" id="upfileimg">
-						<img src="img/design/上传1.png"/>
+						<img src="img/design/upload2.png" />
 						<p>上传</p>
 					</div>
 					<div class="item" id="text">
-						<img src="img/design/文字 (2).png"/>
+						<img src="img/design/font2.png" />
 						<p>文字</p>
 					</div>
-					<div class="item" id="mydesign">
-						<img src="img/design/我的作品 (2).png"/>
-						<p>作品</p>
-					</div>
 					<div class="item" id="zoom">
-						<img src="img/design/缩放 (2).png"/>
+						<img src="img/design/zoom2.png" />
 						<p>缩放</p>
 					</div>
 					<div class="item" id="rotation">
-						<img src="img/design/旋转 (3).png"/>
+						<img src="img/design/rotate2.png" />
 						<p>旋转</p>
 					</div>
 					<div class="item" id="delete">
-						<img src="img/design/删除 (2).png"/>
+						<img src="img/design/del2.png" />
 						<p>删除</p>
 					</div>
-					<div class="item" id="save">
+					<div class="item" id="mydesign">
+						<img src="img/design/works2.png" />
+						<p>作品</p>
+					</div>
+					<!--<div class="item" id="save">
 						<img src="img/design/保存 (2).png"/>
 						<p>保存</p>
-					</div>
+					</div>-->
 				</div>
 				
 				<input type="file" id="upfile" style="display:none;"/>
@@ -68,13 +68,13 @@
 			<div class="toolbar">
 				<div class="weui_navbar">
 					<div class="weui_navbar_item" id="make">
-						商品详情
+						<img src="img/design/gooddesing.png" />&nbsp;商品详情
 					</div>
-					<div class="weui_navbar_item" id="preview">
-						预览设计
+					<div class="weui_navbar_item" id="save">
+						<img src="img/design/save1.png" />&nbsp;保存设计
 					</div>
 					<div class="weui_navbar_item weui_bar_item_on" id="shopcar">
-						加入购物车
+						<img src="img/MyPreview/shopcar11.png" />&nbsp;加入购物车
 					</div>
 				</div>
 			</div>
@@ -399,19 +399,19 @@
 			}
 		});
 		
-		//预览
-		$("#preview").swipe({
-			tap : function() {
-				hideActionSheet();
-				$("#loadingToast").show();
-                curdraw.save().then(function( img ) {
-                    actionsheet.find(".weui_actionsheet_menu").html($("#tmp_preview").html());
-                    actionsheet.addClass("weui_actionsheet_toggle");
-                    $("#preview_img").attr("src",img);
-                    $("#loadingToast").hide();
-                });
-			}
-		});
+//		//预览
+//		$("#preview").swipe({
+//			tap : function() {
+//				hideActionSheet();
+//				$("#loadingToast").show();
+//              curdraw.save().then(function( img ) {
+//                  actionsheet.find(".weui_actionsheet_menu").html($("#tmp_preview").html());
+//                  actionsheet.addClass("weui_actionsheet_toggle");
+//                  $("#preview_img").attr("src",img);
+//                  $("#loadingToast").hide();
+//              });
+//			}
+//		});
 		
 		$("#zoom").swipe({
 			tap : function() {

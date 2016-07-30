@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>修改资料</title>
+		<link rel="stylesheet" type="text/css" href="../css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/memberChildpages/Modifygender.css" />
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="navbar">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
+				<span class="body">
+					修改资料
+				</span>
+				<span class="footer">
+				</span>
+			</div>
+			<div class="content background Modifygender">
+				<div class="row Modifygender-list">
+					<div class="Modifygender-tu">
+						<img src="../img/memberChildpages/xingbie.png"/>
+					</div>
+					<div class="Modifygender-content">
+					       男
+					</div>
+				</div>
+				<div class="row Modifygender-list">
+					<div class="Modifygender-tu">
+						<img src="../img/memberChildpages/xingbie.png"/>
+					</div>
+					<div class="Modifygender-content">
+					       女
+					</div>
+				</div>
+				<div class="row method ">
+						<a href="# ">确定</a>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".Modifygender-list").each(function(i) {
+					$(this).click(function() {
+						$(".Modifygender-tu").each(function() {
+							$(this).hide();
+						});
+						$(".Modifygender-tu").eq(i).show();
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>
+
+

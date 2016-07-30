@@ -1,3 +1,5 @@
+
+/*第一个模块*/
 .orderdetail-a,.orderdetail-b{
 	background: #FFFFFF;
 	margin: 10px 0px;
@@ -6,6 +8,7 @@
 .orderdetail-a{
 	padding: 10px;
 }
+/*第二个模块*/
 .orderdetail-bb{
 	padding: 10px;
 	border-bottom: 1px solid #CCCCCC;
@@ -18,11 +21,14 @@
 	text-align: right;
 }
 
+
+/*第三个模块*/
 .orderdetail-c{
 	background: #FFFFFF;
 	padding: 10px;
 	margin-bottom: 40px;
 	font-size: 14px;
+	color: #666666;
 }
 .orderdetail-address{
 	display: -webkit-box;

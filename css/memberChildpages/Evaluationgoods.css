@@ -24,3 +24,20 @@
 	font-size: 13px;
 	height: 120px;
 }
+
+.firm-footer-b{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 0%;
+}
+.firm-footer-b .weui_cell_ft{
+	margin-top: -10px;
+	margin-left: 30px;
+}
+
+.weui_cells_checkbox .weui_check:checked+.weui_icon_checked:before {
+    content: '\EA06';
+    color: #ef0000;
+}

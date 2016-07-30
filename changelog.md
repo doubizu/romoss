@@ -1,3 +1,10 @@
+#2016/7/30更新
+修改啦desgin.html上的页面
+增加啦修改啦desgin图片文件夹里增加啦 gooddesing.png,save1.png,shopcar11.png
+modified:   memberChildpages
+modified:  css/ memberChildpages
+modified:   changelog.md
+
 #2016/7/29下午更新
 限制上传图片格式png/gif/jpg
 modified:   changelog.md

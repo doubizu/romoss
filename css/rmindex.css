@@ -26,23 +26,24 @@
 /**
  * 左右2格 上下2格gird
  */
+
+
 .gird22 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
 	flex-flow: row nowrap;
 	border-bottom: 2px solid #EEEEEE;
 }
 .gird22 div{
-	flex: 0 0 50%;
+	flex: 1 1 50%;
 }
 .gird22 div img{
 	width: 100%;
 	display: block;
 }
-.gird22 > div:nth-child(2) {
+.gird22 div:nth-child(2) {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -50,13 +51,15 @@
 	flex-flow: column nowrap;
 	border-left: 1px solid #EEEEEE;
 }
-.gird22 > div:nth-child(2) div{
-	flex: 0 0 50%;
+.gird22 div:nth-child(2) div{
+	flex: 1 1 50%;
 }
-.gird22 > div:nth-child(2) div:nth-child(1) {
+.gird22 div:nth-child(2) div:nth-child(1) {
 	border-bottom: 1px solid #EEEEEE;
 }
-
+.gird22 div:nth-child(2) div:nth-child(2){
+	margin-left: -1px;
+}
 /**
  * 一行网格
  */

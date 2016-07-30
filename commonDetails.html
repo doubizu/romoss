@@ -50,11 +50,15 @@
 				<div class="row make-top"></div>
 				<div class="row make-color">
 					<p>颜色</p>
-					<p>
-						<span><a href="#">白色</a></span>
-						<span><a href="#">粉色</a></span>
-						<span><a href="#">天蓝色</a></span>
-					</p>
+					<ul id="makeul">
+						<li>白色</li>
+						<li>粉色</li>
+						<li>天蓝色</li>
+						<li>天蓝色天蓝色</li>
+						<li>天蓝色</li>
+						<li>天蓝色</li>
+						<li>天蓝色</li>
+					</ul>
 				</div>
 				<div class="row make-border"></div>
 				<div class="row make-number">
@@ -226,6 +230,9 @@
 						});
 						$(".Tabs_box").eq(i).show();
 					})
+				})
+				$("#makeul li").click(function() {
+					$(this).addClass('cur').siblings('.cur').removeClass('cur');
 				})
 			});
 		</script>

@@ -1,0 +1,39 @@
+.paymentdetails-list{
+	background: #FFFFFF;
+	padding: 10px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #666666;
+}
+.paymentdetails-list:last-child{
+	border-bottom: none;
+}
+.paymentdetails-list ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+}
+.paymentdetails-list ul li:nth-child(1){
+	width: 35%;
+}
+.paymentdetails-list ul li:nth-child(1) p,.paymentdetails-list ul li:nth-child(2) p{
+	font-size: 12px;
+}
+.paymentdetails-list ul li:nth-child(2){
+	width: 55%;
+	text-align: right;
+	padding-right: 10px;
+}
+.paymentdetails-list ul li:nth-child(3){
+	width: 10%;
+	padding-top: 10px;
+}
+.paymentdetails-list ul li:nth-child(3) img{
+	width: 30%;
+}
+
+/*字体颜色*/
+.list-color{
+	color:#ff771b;
+}

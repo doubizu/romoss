@@ -72,6 +72,11 @@
 				<div class="row command">
 					<div class="command-a">
 						<ul>
+							<li><img src="img/memberChildpages/myteam.png" width="29"/></li>
+							<li>我的团队</li>
+							<li><img src="img/memberCenter/caidan1.png" width="10"/></li>
+						</ul>
+						<ul>
 							<li><img src="img/memberCenter/wodezhuiji.png" width="29"/></li>
 							<li>我的足迹</li>
 							<li><img src="img/memberCenter/caidan1.png" width="10"/></li>
@@ -115,7 +120,7 @@
 			            </div>
 			            <p class="weui_tabbar_label">购物车</p>
 			        </a>
-			        <a href="javascript:;" class="weui_tabbar_item">
+			        <a href="memberCenter.html" class="weui_tabbar_item">
 			            <div class="weui_tabbar_icon">
 			                <img src="img/rmindex/number1.png" alt="">
 			            </div>
@@ -125,44 +130,4 @@
 			</div>
 		</div>
 	</body>
-	
-	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<!-- jquery手势插件 -->
-	<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		/**
-		 * 查询
-		 */
-		$('.page').on('focus', '#search_input', function () {
-            var $weuiSearchBar = $('#search_bar');
-            $weuiSearchBar.addClass('weui_search_focusing');
-        }).on('blur', '#search_input', function () {
-            var $weuiSearchBar = $('#search_bar');
-            $weuiSearchBar.removeClass('weui_search_focusing');
-            if ($(this).val()) {
-                $('#search_text').hide();
-            } else {
-                $('#search_text').show();
-            }
-        }).on('input', '#search_input', function () {
-            var $searchShow = $("#search_show");
-            if ($(this).val()) {
-                $searchShow.show();
-            } else {
-                $searchShow.hide();
-            }
-        }).on('touchend', '#search_cancel', function () {
-            $("#search_show").hide();
-            $('#search_input').val('');
-        }).on('touchend', '#search_clear', function () {
-            $("#search_show").hide();
-            $('#search_input').val('');
-        });
-        
-        $("#search_show .weui_cell").swipe({
-        	tap : function() {
-        		 $("#search_show").hide();
-        	}
-        });
-	</script>
 </html>

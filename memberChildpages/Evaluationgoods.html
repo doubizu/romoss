@@ -12,7 +12,7 @@
 
 	<body>
 		<div class="page firmorder">
-			<div class="navbar makenav">
+			<div class="navbar">
 				<span class="head">
 					<a href="javascript:;">
 						<i class="icon-left"></i>
@@ -55,7 +55,7 @@
 					<div class="weui_cells weui_cells_form">
 						<div class="weui_cell">
 							<div class="weui_cell_bd weui_cell_primary">
-								<textarea class="weui_textarea" placeholder="写点什么吧，对其他顾客有很大的帮助哦" rows="3"></textarea>
+								<textarea class="weui_textarea" placeholder="写点什么吧，对其他顾客有很大的帮助哦" rows="3"autofocus></textarea>
 							</div>
 						</div>
 					</div>
@@ -84,14 +84,24 @@
 			</div>
 			<div class="toolbar firm-footer">
 				<div class="weui_navbar">
-					<div class="weui_navbar_item" ">
-						<a href="# ">
-							合计：119.00元
+					<div class="weui_navbar_item firm-footer-b">
+						<div class="weui_cell_ft">
+							<div class="weui_cells_checkbox">
+								<label class="weui_cell weui_check_label" for="s15">
+							        <div class="weui_cell_hd">
+							            <input type="checkbox" name="checkbox1" class="weui_check" id="s15">
+							            <i class="weui_icon_checked"></i>
+							        </div>
+						        </label>
+							</div>
+						</div>
+						<a href="#" style="color: #666666;">
+							匿名
 						</a>
 					</div>
 					<div class="weui_navbar_item weui_bar_item_on firm-footer-a ">
 						<a href="# ">
-							去支付
+							发布
 						</a>
 					</div>
 				</div>

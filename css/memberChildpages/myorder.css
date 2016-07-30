@@ -1,3 +1,4 @@
+/*我的订单的导航条*/
 .myorder-nav{
 	background: #FFFFFF;
 	margin: 10px 0px;
@@ -8,7 +9,6 @@
 	display: -ms-flexbox;
 	display: flex;
 	flex: 1 1 auto;
-	list-style: none;
 }
 .myorder-nav ul li{
 	flex: 1 1 20%;
@@ -23,4 +23,69 @@
 }
 .myorder-nav ul .myorde-rnav-li a{
 	color:#ff771b;
+}
+
+/*商品列表开始*/
+
+/*商品列表上面部分*/
+.myorder-row{
+	margin-top: -5px;
+}
+.myorder-content{
+	background: #FFFFFF;
+	margin: 10px 0px;
+}
+
+.order-content-a,.myorder-content ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+}
+.order-content-a{
+	padding: 10px 5px;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 15px;
+}
+.order-content-a .myorder-a-left{
+	width: 80%;
+	color: #666666;
+}
+.order-content-a .myorder-a-right{
+	width: 20%;
+	text-align: center;
+	color: #ff771b;
+}
+
+/*商品列表下面部分*/
+.myorder-content ul{
+	padding: 10px;
+	color: #666666;
+}
+.myorder-content ul li:nth-child(1){
+	width: 20%;
+	padding: 3px;
+}
+.myorder-content ul li:nth-child(1) img{
+	width: 100%;
+}
+.myorder-content ul li:nth-child(2){
+	width: 50%;
+	text-align:left;
+}
+.myorder-content ul li:nth-child(2) h4{
+	padding-bottom: 8px;
+}
+.myorder-content ul li:nth-child(2) p{
+	font-size: 14px;
+}
+.myorder-content ul li:nth-child(2) p span{
+	color: #ff771b;
+}
+.myorder-content ul li:nth-child(3){
+	width: 30%;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 55px;
 }

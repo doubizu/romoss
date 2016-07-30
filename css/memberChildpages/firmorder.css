@@ -22,12 +22,19 @@
 /*第三个模块*/
 .firmorder-c {
 	background: #FFFFFF;
-	margin: 10px 0px;
+	margin-top: 10px;
 	padding: 10px 30px;
 	color: #666666;
 }
 
-/*第四个模块*/
+/*支付方式和配送方式*/
+.firmorder-way{
+	padding-top: 20px;
+}
+.firmorder-way h4{
+	padding-left: 10px;
+	color: #666666;
+}
 .firmorder-d .weui_cells{
 	margin-top: 0px;
 }
@@ -38,9 +45,8 @@
 .firmorder-d p{
 	color: #666666;
 }
-/*第五个模块*/
+/*第六个模块*/
 .firmorder-e{
-	margin-top: 50px;
 	background: #ffdec8;
 	padding: 8px 0px 8px 10px;
 	font-size: 14px;

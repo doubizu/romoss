@@ -1,0 +1,24 @@
+.Modifygender-list{
+	background: #FFFFFF;
+	padding: 10px;
+	border-bottom: 1px solid #CCCCCC;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1 1 auto;
+	color: #666666;
+}
+.Modifygender-list:nth-child(2){
+	border-bottom: none;
+}
+.Modifygender-list .Modifygender-content{
+	width: 95%;
+}
+.Modifygender-list .Modifygender-tu{
+	display: none;
+	width: 5%;
+}
+.Modifygender-list .Modifygender-tu img{
+	width:35%;
+}
