@@ -1,3 +1,9 @@
+#2016/7/30中午更新
+增加啦会员中心的Withdrawals.html和Detail.html和相对应的样式。
+
+
+
+
 #2016/7/30更新
 修改啦desgin.html上的页面
 增加啦修改啦desgin图片文件夹里增加啦 gooddesing.png,save1.png,shopcar11.png
