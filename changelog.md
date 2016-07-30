@@ -1,3 +1,11 @@
+
+#2016/7/30下午更新
+modified:  desgin.html
+modified:  myPreview.html
+modified:   changelog.md
+img里的desgin文件夹里增加啦preview.png
+MyPreview里增加啦save1 (2).png
+
 #2016/7/30中午更新
 增加啦会员中心的Withdrawals.html和Detail.html和相对应的样式。
 

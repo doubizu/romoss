@@ -57,10 +57,10 @@
 						<img src="img/design/works2.png" />
 						<p>作品</p>
 					</div>
-					<!--<div class="item" id="save">
-						<img src="img/design/保存 (2).png"/>
+					<div class="item" id="save">
+						<img src="img/design/save1.png"/>
 						<p>保存</p>
-					</div>-->
+					</div>
 				</div>
 				
 				<input type="file" id="upfile" style="display:none;"/>
@@ -70,11 +70,11 @@
 					<div class="weui_navbar_item" id="make">
 						<img src="img/design/gooddesing.png" />&nbsp;商品详情
 					</div>
-					<div class="weui_navbar_item" id="save">
-						<img src="img/design/save1.png" />&nbsp;保存设计
+					<div class="weui_navbar_item" id="preview">
+						<img src="img/design/preview.png" />&nbsp;预览设计
 					</div>
 					<div class="weui_navbar_item weui_bar_item_on" id="shopcar">
-						<img src="img/MyPreview/shopcar11.png" />&nbsp;加入购物车
+						<img src="img/design/shopcar11.png" />&nbsp;加入购物车
 					</div>
 				</div>
 			</div>
@@ -277,11 +277,11 @@
         </div>
 		</script>
 	
-		<script type="text/html" id="tmp_preview">
+		<!--<script type="text/html" id="tmp_preview">
 			<div class="preview">
 				<img src="" alt="" id="preview_img"/>
 			</div>
-		</script>
+		</script>-->
 	</body>
 	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/easeljs-0.8.2.min.js" type="text/javascript" charset="utf-8"></script>
@@ -398,8 +398,12 @@
                 });
 			}
 		});
-		
-//		//预览
+		//预览跳转页面
+		$("#preview").swipe({
+			tap : function() {
+				window.location.href = "mypreview.html";
+			}
+		});
 //		$("#preview").swipe({
 //			tap : function() {
 //				hideActionSheet();
