@@ -1,4 +1,8 @@
 #2016/7/30更新
+修改画布生成图片的品质，默认都设为1
+modified:   js/draw.js
+
+#2016/7/30更新
 修改啦desgin.html上的页面
 增加啦修改啦desgin图片文件夹里增加啦 gooddesing.png,save1.png,shopcar11.png
 modified:   memberChildpages

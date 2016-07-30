@@ -1,6 +1,28 @@
 (function( global,factory ){
 	factory(global);
 }( window,function(){
+	function toDataURLHig( backgroundColor, mimeType ) {
+		var data, ctx = this.canvas.getContext('2d'), w = this.canvas.width, h = this.canvas.height;
+ 
+		if (backgroundColor) {
+			data = ctx.getImageData(0, 0, w, h);
+			var compositeOperation = ctx.globalCompositeOperation;
+			ctx.globalCompositeOperation = "destination-over";
+			
+			ctx.fillStyle = backgroundColor;
+			ctx.fillRect(0, 0, w, h);
+		}
+ 
+		var dataURL = this.canvas.toDataURL(mimeType||"image/png",1);
+ 
+		if(backgroundColor) {
+			ctx.putImageData(data, 0, 0);
+			ctx.globalCompositeOperation = compositeOperation;
+		}
+ 
+		return dataURL;
+	}
+	
 	window.Draw = function( id ) {
 		this.current = null; //定义当前对象
 	    this.changeEvent = []; //定义事件栈
@@ -94,7 +116,8 @@
 		
 		var that = this;
 		setTimeout( function() {
-	        d.resolve( that.stage.toDataURL("transparent","image/png") );
+			d.resolve( toDataURLHig.call(that.stage,"transparent","image/png") );
+//	        d.resolve( that.stage.toDataURL("transparent","image/png") );
 	    },300 );
 		return d.promise();
 	}
