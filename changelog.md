@@ -1,4 +1,10 @@
 #2016/7/31更新
+重新设计预览页面
+modified:   css/design.css
+modified:   design.html
+modified:   index.html
+
+#2016/7/31更新
 修正上传图片不能换层的bug
 modified:   design.html
 modified:   js/draw.js

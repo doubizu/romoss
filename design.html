@@ -10,7 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="font/font.css"/>
 	</head>
 	<body>
-		<div class="page">
+		<!-- 设计主面版  -->
+		<div class="page design">
 			<div class="navbar">
 				<span class="head">
 					<a href="javascript:;">
@@ -24,7 +25,7 @@
 					
 				</span>
 			</div>
-			<div class="content design">
+			<div class="content">
 				<div class="left">
 					<canvas id="polymos" class="polymos" width="214px" height="450px"></canvas>
 				</div>
@@ -80,6 +81,40 @@
 			</div>
 		</div>
 		
+		<!-- 预览设计页面 -->
+		<div class="page preview" style="display: none;">
+			<div class="navbar makenav">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
+				<span class="body">
+					我的定制预览
+				</span>
+				<span class="footer">
+				</span>
+			</div>
+			<div class="content">
+				<img id="preview_img" src=""/>
+			</div>
+			<div class="toolbar">
+				<div class="weui_navbar">
+					<div class="weui_navbar_item">
+						<a href="javascript:;" id = "pre_save">
+							<img src="img/MyPreview/save1 (2).png" />&nbsp;保存设计
+						</a>
+					</div>
+					<div class="weui_navbar_item weui_bar_item_on">
+						<a href="javascript:;" id = "pre_shopcar">
+							<img src="img/MyPreview/shopcar11.png" />&nbsp;加入购物车
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 协议弹窗 -->
 		<div class="weui_dialog_confirm Customprotocol" id="warning">
 			<div class="weui_mask"></div>
 			<div class="weui_dialog">
@@ -100,14 +135,29 @@
 		      </div>
 		</div>
 		
-		<!-- 上拉框 -->
-		<div id="actionSheet_wrap">
-		    <!--<div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>-->
-		    <div class="weui_actionsheet" id="weui_actionsheet">
-		        <div class="weui_actionsheet_menu">
+		<!-- 文字输入弹窗 -->
+		<div class="weui_dialog_confirm" id="confirm_dialog" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">请输入文字</strong></div>
+		        <div class="weui_dialog_bd">
+		        	<textarea class="weui_textarea" placeholder="请输入文字" rows="3"></textarea>
 		        </div>
-		        <div class="weui_actionsheet_action">
-		            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        </div>
+		    </div>
+		</div>
+		
+		<!-- 保存成功提示 -->
+		<div class="weui_dialog_alert" id="saveDialog" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_dialog">
+		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">保存成功</strong></div>
+		        <div class="weui_dialog_bd">恭喜您，您的设计保存成功，点击作品进行查看!</div>
+		        <div class="weui_dialog_ft">
+		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
 		        </div>
 		    </div>
 		</div>
@@ -134,32 +184,19 @@
 		    </div>
 		</div>
 		
-		<!-- 文字输入弹窗 -->
-		<div class="weui_dialog_confirm" id="confirm_dialog" style="display: none;">
-		    <div class="weui_mask"></div>
-		    <div class="weui_dialog">
-		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">请输入文字</strong></div>
-		        <div class="weui_dialog_bd">
-		        	<textarea class="weui_textarea" placeholder="请输入文字" rows="3"></textarea>
+		<!-- 上拉框 -->
+		<div id="actionSheet_wrap">
+		    <!--<div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>-->
+		    <div class="weui_actionsheet" id="weui_actionsheet">
+		        <div class="weui_actionsheet_menu">
 		        </div>
-		        <div class="weui_dialog_ft">
-		            <a href="javascript:;" class="weui_btn_dialog default">取消</a>
-		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		        <div class="weui_actionsheet_action">
+		            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
 		        </div>
 		    </div>
 		</div>
 		
-		<div class="weui_dialog_alert" id="saveDialog" style="display: none;">
-		    <div class="weui_mask"></div>
-		    <div class="weui_dialog">
-		        <div class="weui_dialog_hd"><strong class="weui_dialog_title">保存成功</strong></div>
-		        <div class="weui_dialog_bd">恭喜您，您的设计保存成功，点击作品进行查看!</div>
-		        <div class="weui_dialog_ft">
-		            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
-		        </div>
-		    </div>
-		</div>
-		
+		<!-- 精选美图模板 -->
 		<script type="text/html" id="tmp_image">
 			<div class="weui_tab">
 		        <div class="weui_navbar">
@@ -213,6 +250,7 @@
 		    </div>
 		</script>
 		
+		<!-- 绽放、旋转模板 -->
 		<script type="text/html" id="tmp_zoom">
 			<div class="zoom">
 				<div class="dragdealer" id="dragdealer">
@@ -223,6 +261,7 @@
 			</div>
 		</script>
 		
+		<!-- 文字设置模板 -->
 		<script type="text/html" id="tmp_textset">
 			<div class="weui_cells">
 		        <div class="weui_cell weui_cell_select weui_select_after">
@@ -276,12 +315,6 @@
 		    </div>
         </div>
 		</script>
-	
-		<!--<script type="text/html" id="tmp_preview">
-			<div class="preview">
-				<img src="" alt="" id="preview_img"/>
-			</div>
-		</script>-->
 	</body>
 	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/easeljs-0.8.2.min.js" type="text/javascript" charset="utf-8"></script>
@@ -298,14 +331,14 @@
 		saveDialog = $("#saveDialog"); //保存成功
 		curdraw = new Draw("polymos");
 		
+		//隐藏协议弹窗
 		$("#warning .Custom-footer-a").swipe({
 			tap : function() {
 				$("#warning").hide();
 			}
 		});
-		/**
-		 * 图文切换时
-		 */
+		
+		//响应设计窗图文切换
 		curdraw.onchange(function(){
 			if( curdraw.current.name.indexOf("text") != -1 ) {
 				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_textset").html());
@@ -323,7 +356,8 @@
 			}
 		});
 		
-		$("#image").swipe({ //精选美图
+		//精选美图
+		$("#image").swipe({
 			tap : function() {
 				actionsheet.find(".weui_actionsheet_menu").html($("#tmp_image").html());
 				hideActionSheet().then(function(){
@@ -353,7 +387,8 @@
 			}
 		});
 		
-		$("#upfileimg").swipe({ //上传图片
+		//上传图片
+		$("#upfileimg").swipe({
 			tap : function() {
 				hideActionSheet();
 				$("#upfile").unbind().change(function() {
@@ -371,6 +406,7 @@
 			}
 		});
 		
+		//设置文字
 		$("#text").swipe({
 			tap : function() {
 				hideActionSheet();
@@ -378,6 +414,7 @@
 			}
 		});
 		
+		//删除图形
 		$("#delete").swipe({
 			tap : function() {
 				hideActionSheet();
@@ -385,38 +422,46 @@
 			}
 		});
 		
-		$("#save").swipe({
+		//保存设计
+		$("#save,#pre_save").swipe({
 			tap : function() {
 				hideActionSheet();
 				$("#loadingToast").show();
                 curdraw.save().then(function( img ) {
                 	//img 为base64格式
                     sessionStorage.setItem(new Date().getTime(),img);
+                    $(".preview").hide();//预览页面隐藏
+                    $(".design").show(); //设计页面显示
                     curdraw.clear();
                     $("#loadingToast").hide();
                     saveDialog.show();
                 });
 			}
 		});
+		
 		//预览跳转页面
 		$("#preview").swipe({
 			tap : function() {
-				window.location.href = "mypreview.html";
+				hideActionSheet();
+				$("#loadingToast").show();
+                curdraw.save().then(function( img ) {
+                    $("#preview_img").attr("src",img);
+                    $(".preview").show();
+                    $(".design").hide();
+                    $("#loadingToast").hide();
+                });
 			}
 		});
-//		$("#preview").swipe({
-//			tap : function() {
-//				hideActionSheet();
-//				$("#loadingToast").show();
-//              curdraw.save().then(function( img ) {
-//                  actionsheet.find(".weui_actionsheet_menu").html($("#tmp_preview").html());
-//                  actionsheet.addClass("weui_actionsheet_toggle");
-//                  $("#preview_img").attr("src",img);
-//                  $("#loadingToast").hide();
-//              });
-//			}
-//		});
 		
+		//预览返回
+		$(".preview .head a").swipe({
+			tap : function() {
+				$(".preview").hide();
+                $(".design").show();
+			}
+		});
+		
+		//缩放
 		$("#zoom").swipe({
 			tap : function() {
 				if( curdraw.current == null ) {
@@ -448,6 +493,7 @@
 			}
 		});
 		
+		//旋转
 		$("#rotation").swipe({
 			tap : function() {
 				if( curdraw.current == null ) {
@@ -507,13 +553,16 @@
 				window.location.href = "mydesign.html";
 			}
 		});
+		
 		//跳转详情
 		$("#make").swipe({
 			tap : function() {
 				window.location.href = "make.html";
 			}
 		});
-		$("#shopcar").swipe({
+		
+		//购物车
+		$("#shopcar,#pre_shopcar").swipe({
 			tap : function() {
 				window.location.href = "shopcar.html";
 			}
