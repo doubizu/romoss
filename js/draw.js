@@ -41,9 +41,9 @@
 	    return this;
 	}
 	
-	Draw.prototype.addBitmap = function( img, name ) {
+	Draw.prototype.addBitmap = function( img ) {
 		var bitmap = new createjs.Bitmap(); 
-		bitmap.name = name || 'bitmap';
+		bitmap.name = 'bitmap';
 		bitmap.image = img;
 		
 		//设置缩放
@@ -233,7 +233,6 @@
 		var children = this.stage.children;
 		for( var i = 0;i < children.length;i++ ) {
 			if( children[i].name != "bitmap") {
-				console.log(i);
 				break;
 			}
 			swap = children[i];

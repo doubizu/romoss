@@ -1,3 +1,7 @@
+#2016/7/31更新
+修正上传图片不能换层的bug
+modified:   design.html
+modified:   js/draw.js
 
 #2016/7/30下午更新
 modified:  desgin.html

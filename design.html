@@ -361,7 +361,7 @@
                     //检测输入
                     if( file.type == "image/png" || file.type == "image/jpg" || file.type == "image/jpeg" || file.type == "image/gif" ) {
                     	readFile( file ).then(function( img ){
-	                    	curdraw.addBitmap(img,"upfile");
+	                    	curdraw.addBitmap(img);
 	                    });
                     } else {
                     	alert("图片格式不正确!");
