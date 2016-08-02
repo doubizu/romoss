@@ -40,6 +40,8 @@
 }
 
 .polymos {
+	width: 214px;
+	height: 450px;
     border-radius: 20px;
     background: url(../img/design/bg.png) center center no-repeat;
 }

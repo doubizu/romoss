@@ -79,7 +79,7 @@
 	
 	Draw.prototype.addText = function( str ) {
 		str = str || "请输入";
-		var text = new createjs.Text(str,"20px Arial", "#000000");
+		var text = new createjs.Text(str,"70px Arial", "#000000");
 		text.name = 'text';
 	
 		//设置点击区域

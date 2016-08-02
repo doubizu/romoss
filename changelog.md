@@ -1,5 +1,5 @@
 #2016/7/31更新
-重新设计预览页面
+重新设计预览页面,整理代码
 modified:   css/design.css
 modified:   design.html
 modified:   index.html
@@ -18,9 +18,6 @@ MyPreview里增加啦save1 (2).png
 
 #2016/7/30中午更新
 增加啦会员中心的Withdrawals.html和Detail.html和相对应的样式。
-
-
-
 
 #2016/7/30更新
 修改画布生成图片的品质，默认都设为1
