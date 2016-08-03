@@ -42,8 +42,20 @@
 .polymos {
 	width: 214px;
 	height: 450px;
-    border-radius: 20px;
     background: url(../img/design/bg.png) center center no-repeat;
+}
+
+.radius-top-left {
+	border-top-left-radius: 20px;
+}
+.radius-top-right {
+	border-top-right-radius: 20px;
+}
+.radius-bottom-left {
+	border-bottom-left-radius: 20px;
+}
+.radius-bottom-right {
+	border-bottom-right-radius: 20px;
 }
 
 /**
