@@ -1,3 +1,9 @@
+#2016/8/4更新
+增加上传导航条
+modified:   changelog.md
+modified:   css/design.css
+modified:   design.html
+
 #2016/7/31更新
 重新设计预览页面,整理代码
 modified:   css/design.css

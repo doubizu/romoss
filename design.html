@@ -184,6 +184,16 @@
 		    </div>
 		</div>
 		
+		<!-- 进度条 -->
+		<div class="weui_dialog_alert" id="progress" style="display: none;">
+		    <div class="weui_mask"></div>
+		    <div class="weui_progress">
+		        <div class="weui_progress_bar">
+		            <div class="weui_progress_inner_bar js_progress" style="width: 0%;"></div>
+		        </div>
+		    </div>
+		</div>
+		
 		<!-- 上拉框 -->
 		<div id="actionSheet_wrap">
 		    <!--<div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>-->
@@ -426,15 +436,32 @@
 		$("#save,#pre_save").swipe({
 			tap : function() {
 				hideActionSheet();
-				$("#loadingToast").show();
+				
+				//进度条
+				$("#progress").show();
+				var $progress = $('.js_progress');
+				var count = 0;
+				function next(){
+					setTimeout(function(){
+						$progress.css({width: count + '%'}).html(count + "%");
+						if( count == 100 ) {
+							$("#progress").hide();
+							saveDialog.show();
+						} else {
+							next();
+							count++;
+						}
+					},30);//30表示最大时间为3s，3s分成100分
+				};
+				next();
+				
+				//保存代码
                 curdraw.save().then(function( img ) {
                 	//img 为base64格式
-                    sessionStorage.setItem(new Date().getTime(),img);
+//                  sessionStorage.setItem(new Date().getTime(),img);
                     $(".preview").hide();//预览页面隐藏
                     $(".design").show(); //设计页面显示
                     curdraw.clear();
-                    $("#loadingToast").hide();
-                    saveDialog.show();
                 });
 			}
 		});
@@ -598,8 +625,8 @@
 	
 	function readFile( file ) {
 		$("#loadingToast").show();
-		var d = $.Deferred();
 		
+		var d = $.Deferred();
 		var fr = new FileReader();
 		fr.readAsDataURL( file );
 		fr.onload = function() {
@@ -610,7 +637,6 @@
 				$("#loadingToast").hide();
             }
 		}
-		
 		return d.promise();
 	}
 	</script>

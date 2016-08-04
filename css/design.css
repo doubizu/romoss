@@ -129,3 +129,24 @@
 	background-color: transparent;
 	border-bottom: 1px solid #04a7b0;
 }
+
+.weui_progress {
+	position: fixed;
+	top: 180px;
+	padding: 20px;
+	width: 90%;
+	z-index: 3;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.weui_progress .weui_progress_bar {
+	height: 25px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.weui_progress .js_progress {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
