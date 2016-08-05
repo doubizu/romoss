@@ -11,6 +11,8 @@
 	border-bottom: 5px solid #EEEEEE;
 }
 .gird5 div{
+	-webkit-flex: 0 0 20%;
+	-webkit-box-flex: 0 0 20%;
 	flex: 0 0 20%;
 	text-align: center;
 	color: #a4a4a4;
@@ -37,6 +39,8 @@
 	border-bottom: 2px solid #EEEEEE;
 }
 .gird22 div{
+	-webkit-flex: 1 1 50%;
+	-webkit-box-flex: 1 1 50%;
 	flex: 1 1 50%;
 }
 .gird22 div img{
@@ -52,6 +56,8 @@
 	border-left: 1px solid #EEEEEE;
 }
 .gird22 div:nth-child(2) div{
+	-webkit-flex: 1 1 50%;
+	-webkit-box-flex: 1 1 50%;
 	flex: 1 1 50%;
 }
 .gird22 div:nth-child(2) div:nth-child(1) {

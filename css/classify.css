@@ -7,6 +7,8 @@
 	font: 16px "Arial", "sans-serif", "微软雅黑", "宋体", "Tahoma";
 }
 .classifylayout .left {
+	-webkit-flex: 0 0 100px;
+	-webkit-box-flex: 0 0 100px;
 	flex: 0 0 100px;
 	
 	display: -webkit-box;
@@ -33,6 +35,8 @@
 }
 
 .classifylayout .right {
+	-webkit-flex: 0 0 auto;
+	-webkit-box-flex: 0 0 auto;
 	flex: 1 1 auto;
 	padding: 5px;
 }
@@ -49,6 +53,8 @@
 	flex-flow: row nowrap;
 }
 .gird3 div {
+	-webkit-flex: 0 0 33.3%;
+	-webkit-box-flex: 0 0 33.3%;
 	flex: 0 0 33.3%;
 	text-align: center;
 	color: #a4a4a4;

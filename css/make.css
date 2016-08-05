@@ -82,9 +82,16 @@
 	background: #f3f3f3;
 }
 .make-number{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	
 	height: 60px;
-	flex:1;
 	line-height: 60px;
 	padding-left: 10px;
 }
@@ -96,7 +103,14 @@
 	width:40%;
 	padding-top: 15px;
 	padding-right: 10px;
+	
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
 	flex: 1;
 }
 .make-number .make-button a {
@@ -115,7 +129,6 @@
 	border: none;
 	text-align: center;
 	border-bottom: 1px solid #E6E6E6;
-	
 }
 .make-number .make-button a:active {
 	background-color: #04a7b0;
@@ -154,8 +167,15 @@
 }
 
 .parameter-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex: 1 1 auto;
+	
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	
 	height: 60px;
 	line-height: 60px;
 	padding-left: 10px;
@@ -184,27 +204,37 @@
 	margin-bottom: 15px;
 }
 .comment-aa{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex: 1 1 auto;
+	
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
 	padding-top: 20px;
 }
 .comment-zi {
- flex: 1 1 auto;
- padding-top: 10px;
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	padding-top: 10px;
 }
 
 .comment-img, .comment-xing {
- flex: 1 1 auto;
- text-align: center;
- 
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	
+	text-align: center;
 }
 .comment-xing{
 	padding-top: 10px;
 }
 .comment-img {
-  /* 导航放到最左边 */
-  order: -1;
-  padding-left: 10px;
+    /* 导航放到最左边 */
+    order: -1;
+    padding-left: 10px;
 }
 .comment-aa:last-child{
 	margin-bottom: 30px;

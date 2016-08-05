@@ -7,6 +7,8 @@
 	flex-flow: row nowrap;
 }
 .design > .content > .left {
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	
 	display: -webkit-box;
@@ -17,6 +19,8 @@
 	align-items: center;
 }
 .design > .content > .right {
+	-webkit-flex: 1 1 50px;
+	-webkit-box-flex: 1 1 50px;
 	flex: 0 0 50px;
 	
 	display: -webkit-box;
@@ -65,7 +69,11 @@
  */
 .imgset {
 	list-style: none;
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
     height: 50vh;
     flex-flow: row wrap;
     overflow-y: scroll;
@@ -95,7 +103,10 @@
 	align-items: center;
 }
 .zoom .dragdealer {
+	-webkit-flex: 1 1 95%;
+	-webkit-box-flex: 1 1 95%;
 	flex: 0 0 95%;
+	
     height: 10px;
     border-radius: 10px;
     position : relative;

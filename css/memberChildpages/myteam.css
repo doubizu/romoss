@@ -1,5 +1,7 @@
 /*我的团队页头*/
 .myteam .teamnav .body{
+	-webkit-flex: 1 1 80%;
+	-webkit-box-flex: 1 1 80%;
 	flex: 1 1 80%;
 }
 .myteam .teamnav .body .myteam-body{
@@ -9,8 +11,8 @@
 	margin-left: 15px;
 	margin-top: 7px;
 	position: relative;
-	
 }
+
 .myteam .teamnav .body .myteam-body i{
 	margin-top: -10px;
 	padding: 0px 5px;
@@ -20,6 +22,8 @@
 	z-index: 99;
 }
 .myteam .teamnav .footer{
+	-webkit-flex: 1 1 20%;
+	-webkit-box-flex: 1 1 20%;
 	flex: 1 1 20%;
 }
 .myteam .body input{
@@ -49,17 +53,24 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	background: #FFFFFF;
 	padding: 10px;
 }
 .myteamlist ul li:nth-child(1){
+	-webkit-flex: 1 1 15%;
+	-webkit-box-flex: 1 1 15%;
 	flex: 1 1 15%;
 }
 .myteamlist ul li:nth-child(1) img{
 	width: 100%;
 }
 .myteamlist ul li:nth-child(2){
+	-webkit-flex: 1 1 55%;
+	-webkit-box-flex: 1 1 55%;
 	flex: 1 1 55%;
 	padding-left: 15px;
 }
@@ -70,6 +81,8 @@
 	font-size: 13px;
 }
 .myteamlist ul li:nth-child(3){
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
 	padding-left: 20px;
 }
@@ -99,12 +112,17 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	background: #04a7b0;
 	text-align: center;
 	
 }
 .myteamtoolbar .teamnews{
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
 	text-align: right;
 	padding-top: 12px;
@@ -113,7 +131,10 @@
 	width: 20%;
 }
 .myteamtoolbar .teamnews-a{
-	flex: 1 70%;
+	-webkit-flex: 1 1 70%;
+	-webkit-box-flex: 1 1 70%;
+	flex: 1 1 70%;
+	
 	text-align: left;
 	padding-left: 10px;
 	padding-top: 10px;

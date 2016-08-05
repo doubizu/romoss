@@ -8,10 +8,16 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 .myorder-nav ul li{
+	-webkit-flex: 1 1 20%;
+	-webkit-box-flex: 1 1 20%;
 	flex: 1 1 20%;
+	
 	text-align: center;
 	padding: 10px 0px;
 }
@@ -41,6 +47,9 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 .order-content-a{

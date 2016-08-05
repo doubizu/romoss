@@ -16,11 +16,16 @@ ul{
 	display: flex;
 	height: 100vh;
 	width: 100%;
+	-webkit-flex-flow : column nowrap;
+	-webkit-box-flex-flow : column nowrap;
 	flex-flow: column nowrap;
 }
 
 .page .navbar {
+	-webkit-flex: 0 0 50px;
+	-webkit-box-flex: 0 0 50px;
 	flex: 0 0 50px;
+	
 	line-height: 50px;
 	width: 100%;
 	background-color: #04a7b0;
@@ -33,12 +38,16 @@ ul{
 }
 
 .page .content {
+	-webkit-flex: 1 1 90%;
+	-webkit-box-flex: 1 1 90%;
 	flex: 1 1 90%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 
 }
 .page .toolbar {
+	-webkit-flex: 0 0 49px;
+	-webkit-box-flex: 0 0 49px;
 	flex: 0 0 49px;
 	width: 100%;
 	border-top: 1px solid #04a7b0;
@@ -91,7 +100,10 @@ ul{
  */
 
 .page .navbar .head {
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
+	
 	text-align: left;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -102,14 +114,20 @@ ul{
 }
 
 .page .navbar .body {
+	-webkit-flex: 1 1 40%;
+	-webkit-box-flex: 1 1 40%;
 	flex: 1 1 40%;
+	
 	text-align: center;
 	color: white;
 	font-size: 18px;
 }
 
 .page .navbar .footer {
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
+	
 	text-align: right;
 }
 
@@ -205,12 +223,19 @@ ul{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 .address-a .address-left{
+	-webkit-flex: 1 1 80%;
+	-webkit-box-flex: 1 1 80%;
 	flex: 1 1 80%;
 }
 .address-a .address-right{
+	-webkit-flex: 1 1 10%;
+	-webkit-box-flex: 1 1 10%;
 	flex: 1 1 10%;
 	padding-top: 20px;
 	text-align: center;
@@ -250,6 +275,9 @@ ul{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	padding-bottom: 8px;
 }
@@ -301,10 +329,15 @@ ul{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	padding: 10px;
 }
 .Customprotocol-footer a{
+	-webkit-flex: 1 1 50%;
+	-webkit-box-flex: 1 1 50%;
 	flex: 1 1 50%;
 	display: block;
 	width:60px;

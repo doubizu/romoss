@@ -1,11 +1,15 @@
-
-
 .article-list{
 	padding: 10px 10px 10px 8px;
 	border-bottom:1px solid #CCCCCC ;
 }
 .article .list-title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	padding-bottom: 5px;
 }

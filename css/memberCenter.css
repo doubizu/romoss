@@ -14,7 +14,10 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	flex: 1 1 auto;
+	
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
 }
 
 /*头像那一部分*/
@@ -26,12 +29,18 @@
 	border-radius:50%;
 }
 .menber-top .menber-tou {
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
+	
 	padding-top: 30px;
 	text-align: right;
 }
 .menber-top .menber-center {
+	-webkit-flex: 1 1 60%;
+	-webkit-box-flex: 1 1 60%;
 	flex: 1 1 60%;
+	
 	padding-top: 40px;
 	line-height: 30px;
 	padding-left: 10px;
@@ -43,7 +52,10 @@
 }
 
 .menber-top .menber-right {
+	-webkit-flex: 1 1 10%;
+	-webkit-box-flex: 1 1 10%;
 	flex: 1 1 10%;
+	
 	padding-top: 50px;
 	text-align: center;
 }
@@ -65,7 +77,10 @@
 }
 
 .memberCenter-header ul li {
+	-webkit-flex: 1 1 33.3%;
+	-webkit-box-flex: 1 1 33.3%;
 	flex: 1 1 33.3%;
+	
 	text-align: center;
 	background: #04969e;
 	padding: 3px 0px;
@@ -77,7 +92,10 @@
 }
 
 .memberCenter-border div {
+	-webkit-flex: 1 1 50%;
+	-webkit-box-flex: 1 1 50%;
 	flex: 1 1 50%;
+	
 	text-align: center;
 	padding-top: 15px;
 }
@@ -115,11 +133,15 @@
 
 .orderform .orderform-a ul li:nth-child(1),
 .orderform .orderform-a ul li:nth-child(4) {
+	-webkit-flex: 1 1 15%;
+	-webkit-box-flex: 1 1 15%;
 	flex: 1 1 15%;
 }
 
 .orderform .orderform-a ul li:nth-child(2),
 .orderform .orderform-a ul li:nth-child(3) {
+	-webkit-flex: 1 1 35%;
+	-webkit-box-flex: 1 1 35%;
 	flex: 1 1 35%;
 }
 
@@ -150,6 +172,8 @@
 }
 
 .orderform .orderform-a ul:last-child li {
+	-webkit-flex: 1 1 25%;
+	-webkit-box-flex: 1 1 25%;
 	flex: 1 1 25%;
 	text-align: center;
 }
@@ -177,9 +201,13 @@
 	padding-bottom: 2px;
 }
 .command .command-a ul li:nth-child(1),.command .command-a ul li:nth-child(3){
+	-webkit-flex: 1 1 15%;
+	-webkit-box-flex: 1 1 15%;
 	flex: 1 1 15%;
 }
 .command .command-a ul li:nth-child(2){
+	-webkit-flex: 1 1 70%;
+	-webkit-box-flex: 1 1 70%;
 	flex: 1 1 70%;
 	padding-top: 8px;
 	font-size: 16px;

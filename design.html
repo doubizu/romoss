@@ -438,27 +438,28 @@
 		$("#save,#pre_save").swipe({
 			tap : function() {
 				hideActionSheet();
-				
 				//进度条
 				$("#progress").show();
-				var $progress = $('.js_progress');
-				var count = 0;
-				function next(){
-					setTimeout(function(){
-						$progress.css({width: count + '%'}).html(count + "%");
-						if( count == 100 ) {
-							$("#progress").hide();
-							saveDialog.show();
-						} else {
-							next();
-							count++;
-						}
-					},30);//30表示最大时间为3s，3s分成100分
-				};
-				next();
-				
 				//保存代码
                 curdraw.save().then(function( img ) {
+//              	var data = new FormData();
+//              	$.ajax({
+//              		type:"post",
+//              		data : data
+//              		processData : false, 
+//					    //必须false才会自动加上正确的Content-Type 
+//					    contentType : false , 
+//					    xhr: function(){
+//						    var xhr = $.ajaxSettings.xhr();
+//						    if(onprogress && xhr.upload) {
+//							    xhr.upload.addEventListener("progress" , function( event ) {
+//							    	var count = parseInt(event.loaded / event.total);
+//									$('.js_progress').css({width: count + '%'}).html(count + "%")
+//							    }, false);
+//							    return xhr;
+//						    }
+//					    } 
+//              	});
                 	//img 为base64格式
 //                  sessionStorage.setItem(new Date().getTime(),img);
                     $(".preview").hide();//预览页面隐藏
@@ -467,6 +468,10 @@
                 });
 			}
 		});
+		
+		function progress( event ) {
+			;
+		}
 		
 		//预览跳转页面
 		$("#preview").swipe({

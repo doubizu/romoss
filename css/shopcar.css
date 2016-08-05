@@ -32,6 +32,8 @@
 .carcellbd .productimg {}
 
 .carcellbd .productinfo {
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	padding-left: 10px;
 }
@@ -88,7 +90,10 @@
 }
 
 .carfoot label {
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
+	
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -101,7 +106,10 @@
 }
 
 .carfoot .total {
+	-webkit-flex: 1 1 40%;
+	-webkit-box-flex: 1 1 40%;
 	flex: 1 1 40%;
+	
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -112,7 +120,10 @@
 }
 
 .carfoot .pay {
+	-webkit-flex: 1 1 30%;
+	-webkit-box-flex: 1 1 30%;
 	flex: 1 1 30%;
+	
 	background-color: #04a7b0;
 	line-height: 50px;
 	text-align: center;
