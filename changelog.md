@@ -1,3 +1,8 @@
+#2016/8/5更新
+让背景图片自适应
+modified:   css/design.css
+modified:   design.html
+
 #2016/8/4更新
 增加上传导航条
 modified:   changelog.md

@@ -43,6 +43,8 @@
 	width: 214px;
 	height: 450px;
     background: url(../img/design/bg.png) center center no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
 }
 
 .radius-top-left {
@@ -119,9 +121,13 @@
 	display: -ms-flexbox;
 	display: flex;
 	
-	background: url(../img/design/bg.png) center center no-repeat;
 	justify-content: center;
 	align-items: center;
+}
+.preview > .content > div {
+	background: url(../img/design/bg.png) center center no-repeat;
+	background-size: 100%;
+	-webkit-background-size: 100%;
 }
 
 
