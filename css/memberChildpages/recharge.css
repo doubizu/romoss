@@ -41,16 +41,12 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
+	flex: 1 1 auto;
 	-webkit-flex: 1 1 auto;
 	-webkit-box-flex: 1 1 auto;
-	flex: 1 1 auto;
 }
 .recharge-a ul li{
-	-webkit-flex: 1 1 20%;
-	-webkit-box-flex: 1 1 20%;
 	flex: 1 1 20%;
-	
 	border: 1px solid #CCCCCC;
 	margin: 10px 4px;
 	text-align: center;

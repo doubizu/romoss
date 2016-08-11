@@ -7,9 +7,10 @@
 		<title>个人定制</title>
 		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
+
 	<body>
 		<div class="page">
 			<div class="content">
@@ -118,7 +119,7 @@
 				<div class="weui_navbar">
 					<div class="weui_navbar_item" id="me">
 						<a href="#"><img src="img/my.png" />&nbsp;我的作品</a>
-						
+
 					</div>
 					<div class="weui_navbar_item weui_bar_item_on" id="car">
 						<a href="#"><img src="img/car.png" />&nbsp;我的购物车</a>
@@ -132,6 +133,18 @@
 				亲，您还没有购买产品哦<br> 请先选择产品模式
 			</div>
 		</div>
+		
+		
+		<!--弹出框-->
+		<div class="weui_dialog_confirm make-tan" id="maketan">
+			<div class="weui_dialog" style="background: rgba(0,0,0,0.3); width: 60%; padding: 20px;">
+				<div class="make-tan1" style="color: #FFFFFF;text-align: center;">
+					<p>"左右滑动"选择产品</p>
+					<p>"点击"产品进入定制页面</p>
+				</div>
+			</div>
+		</div>
+		
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 轮播插件 -->
 		<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
@@ -144,7 +157,7 @@
 					autoplay: 3000,
 					loop: true,
 					pagination: '.swiper-pagination',
-					slidesPerView: 2,
+					slidesPerView: 3,
 					centeredSlides: true,
 					coverflow: {
 						rotate: 30,
@@ -172,7 +185,15 @@
 						});
 					}
 				});
+				
+//				<!--弹出框-->
+				$("#maketan .weui_dialog").swipe({
+					tap: function() {
+						$("#maketan").hide();
+					}
+				});
 			});
 		</script>
 	</body>
+
 </html>

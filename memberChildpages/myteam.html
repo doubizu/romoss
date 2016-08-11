@@ -12,84 +12,104 @@
 
 	<body>
 		<div class="page myteam">
-			<div class="navbar teamnav">
+			<div class="navbar">
+				<span class="head">
+					<a href="javascript:;">
+						<i class="icon-left"></i>
+					</a>
+				</span>
 				<span class="body">
-					<div class="myteam-body">
-						<i class="weui_icon_search"></i>
-					    <input type="text" name="" id="" value="" placeholder="输入关键字在店内搜索"/>
-					</div>
+					我的团队
 				</span>
 				<span class="footer">
-					<a href="#">搜索</a>
 				</span>
 			</div>
 			<div class="content background myteam-content">
-				<div class="row myteamlist">
-					<h4>我的上级</h4>
+				<div class="row myteam-nav">
+					<ul id="team-nav">
+						<li class="myteam-on"><a href="#">一级<span>(4)</span></a></li>
+						<li><a href="#">二级<span>(0)</span></a></li>
+					</ul>
+				</div>
+				<div class="row myteamlist nav-content">
+					<ul>
+						<li>头像</li>
+						<li>用户名</li>
+						<li>关注时间</li>
+					</ul>
 					<ul>
 						<li><img src="../img/memberChildpages/team-tou.png"/></li>
 						<li>
-							<h3>yi意气风发~往西！</h3>
-							<p>2016-07-20</p>
+							<p>yi意气风发~往西！</p>
 						</li>
 						<li>
-							<a href="#">告诉TA</a>
+							2016-07-20
+						</li>
+					</ul>
+					<ul>
+						<li><img src="../img/memberChildpages/team-tou.png"/></li>
+						<li>
+							<p>yi意气风发~往西！</p>
+						</li>
+						<li>
+							2016-07-20
 						</li>
 					</ul>
 				</div>
-				<div class="row myteamlist myteamlist-xia">
-					<h4>我的上级</h4>
+				
+				
+				<div class="row myteamlist nav-content" style="display: none;">
+					<ul>
+						<li>头像</li>
+						<li>用户名</li>
+						<li>关注时间</li>
+					</ul>
 					<ul>
 						<li><img src="../img/memberChildpages/team-tou.png"/></li>
 						<li>
-							<h3>yi意气风发~往西！</h3>
-							<p>2016-07-20</p>
+							<p>yi意气风发~往西！</p>
 						</li>
 						<li>
-							<a href="#">告诉TA</a>
+							2016-07-20
 						</li>
 					</ul>
 					<ul>
 						<li><img src="../img/memberChildpages/team-tou.png"/></li>
 						<li>
-							<h3>yi意气风发~往西！</h3>
-							<p>2016-07-20</p>
+							<p>yi意气风发~往西！</p>
 						</li>
 						<li>
-							<a href="#">告诉TA</a>
-						</li>
-					</ul>
-					<ul>
-						<li><img src="../img/memberChildpages/team-tou.png"/></li>
-						<li>
-							<h3>yi意气风发~往西！</h3>
-							<p>2016-07-20</p>
-						</li>
-						<li>
-							<a href="#">告诉TA</a>
+							2016-07-20
 						</li>
 					</ul>
 					<ul>
 						<li><img src="../img/memberChildpages/team-tou.png"/></li>
 						<li>
-							<h3>yi意气风发~往西！</h3>
-							<p>2016-07-20</p>
+							<p>yi意气风发~往西！</p>
 						</li>
 						<li>
-							<a href="#">告诉TA</a>
+							2016-07-20
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div class="toolbar myteamtoolbar">
-				<div class="teamnews">
-					<img src="../img/memberChildpages/team-xiaoix.png"/>
-				</div>
-			    <div class="teamnews-a">
-			    	<a href="#">群发消息给所有人</a>
-			    </div>
 			</div>
 		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function  () {
+				$("#team-nav li").click(function() {
+					$(this).addClass('myteam-on').siblings('.myteam-on').removeClass('myteam-on');
+				})
+				$("#team-nav li").each(function(i) {
+					$(this).click(function() {
+						$(".nav-content").each(function() {
+							$(this).hide();
+						});
+						$(".nav-content").eq(i).show();
+					})
+				})
+			})
+		</script>
 	</body>
 
 </html>
