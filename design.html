@@ -38,6 +38,10 @@
 						<img src="img/design/upload2.png" />
 						<p>上传</p>
 					</div>
+					<div class="item" id="down">
+						<img src="img/design/upload2.png" />
+						<p>下移</p>
+					</div>
 					<div class="item" id="text">
 						<img src="img/design/font2.png" />
 						<p>文字</p>
@@ -418,6 +422,13 @@
 			}
 		});
 		
+		//下移
+		$("#down").swipe({
+			tap : function(){
+				curdraw.down();
+			}
+		});
+		
 		//设置文字
 		$("#text").swipe({
 			tap : function() {
@@ -464,7 +475,7 @@
 //                  sessionStorage.setItem(new Date().getTime(),img);
                     $(".preview").hide();//预览页面隐藏
                     $(".design").show(); //设计页面显示
-                    curdraw.clear();
+//                  curdraw.clear();
                 });
 			}
 		});

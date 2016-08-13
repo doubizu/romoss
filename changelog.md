@@ -1,3 +1,8 @@
+#2016/8/13更新
+保存后不清空canvas 增加下移图层功能
+modified:   design.html
+modified:   js/draw.js
+
 #2016/8/5更新
 让背景图片自适应
 modified:   css/design.css

@@ -1,6 +1,6 @@
 (function( global,factory ){
 	factory(global);
-}( window,function(){
+}( window,function( global ){
 	function toDataURLHig( backgroundColor, mimeType ) {
 		var data, ctx = this.canvas.getContext('2d'), w = this.canvas.width, h = this.canvas.height;
  
@@ -23,7 +23,7 @@
 		return dataURL;
 	}
 	
-	window.Draw = function( id ) {
+	global.Draw = function( id ) {
 		this.current = null; //定义当前对象
 	    this.changeEvent = []; //定义事件栈
 	    this.stage = new createjs.Stage( id );//创建舞台对象
@@ -132,6 +132,30 @@
 		if( children.length ) {
 			//切换激活对象
 			this.__changeCurrent(children[0]);
+		}
+	}
+	
+	//上移下移层 只有图片才作用
+	Draw.prototype.up = function(){
+		if( this.current.name === 'bitmap' ) {
+			var children = this.stage.children;
+			for( var i = 0;i < children.length - 1;i++ ) {
+				if( children[i] == this.current ) {
+					this.stage.swapChildren(this.current,children[i + 1]);
+					break;
+				}
+			}
+		}
+	}
+	Draw.prototype.down = function(){
+		if( this.current.name === 'bitmap' ) {
+			var children = this.stage.children;
+			for( var i = 1;i < children.length;i++ ) {
+				if( children[i] == this.current ) {
+					this.stage.swapChildren(this.current,children[i - 1]);
+					break;
+				}
+			}
 		}
 	}
 	
