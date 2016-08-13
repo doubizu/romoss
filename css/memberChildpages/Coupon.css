@@ -1,0 +1,51 @@
+.Coupon{
+	padding: 10px;
+}
+.Couponlist{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex: 1 1 auto;
+	-webkit-box-flex: 1 1 auto;
+	flex: 1,1,auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	
+}
+.coupon-color{
+	background: url(../../img/memberChildpages/Coupon1.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.coupon-colora{
+	background: url(../../img/memberChildpages/Coupon.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.Couponlist .list-left{
+	width: 65%;
+	color: #FFFFFF;
+	text-align: center;
+}
+.Couponlist .list-left h3{
+	font-size: 16px;
+	padding: 10px 0px;
+	padding-bottom: 5px;
+}
+.Couponlist .list-left h2{
+	font-size: 22px;
+}
+.Couponlist .list-right{
+	width: 35%;
+	text-align: center;
+}
+.Couponlist .list-right h2{
+	font-size: 22px;
+	padding: 10px 0px;
+	color: #666666;
+}
+.Couponlist .list-right p{
+	font-size: 12px;
+	color: #999999;
+	padding-bottom: 5px;
+}

@@ -11,9 +11,9 @@
 	border-bottom: 5px solid #EEEEEE;
 }
 .gird5 div{
+	flex: 0 0 20%;
 	-webkit-flex: 0 0 20%;
 	-webkit-box-flex: 0 0 20%;
-	flex: 0 0 20%;
 	text-align: center;
 	color: #a4a4a4;
 	font-size: 12px;

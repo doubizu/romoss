@@ -8,16 +8,12 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
+	flex: 1 1 auto;
 	-webkit-flex: 1 1 auto;
 	-webkit-box-flex: 1 1 auto;
-	flex: 1 1 auto;
 }
 .myorder-nav ul li{
-	-webkit-flex: 1 1 20%;
-	-webkit-box-flex: 1 1 20%;
 	flex: 1 1 20%;
-	
 	text-align: center;
 	padding: 10px 0px;
 }
@@ -47,9 +43,6 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
-	-webkit-flex: 1 1 auto;
-	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 .order-content-a{
@@ -69,32 +62,65 @@
 
 /*商品列表下面部分*/
 .myorder-content ul{
-	padding: 10px;
+	padding: 10px 10px 6px 10px;
 	color: #666666;
+	border-bottom: 1px solid #CCCCCC;
 }
 .myorder-content ul li:nth-child(1){
-	width: 20%;
-	padding: 3px;
+	width: 22%;
 }
 .myorder-content ul li:nth-child(1) img{
 	width: 100%;
 }
 .myorder-content ul li:nth-child(2){
-	width: 50%;
+	width: 45%;
 	text-align:left;
 }
 .myorder-content ul li:nth-child(2) h4{
 	padding-bottom: 8px;
-}
-.myorder-content ul li:nth-child(2) p{
-	font-size: 14px;
-}
-.myorder-content ul li:nth-child(2) p span{
-	color: #ff771b;
+	padding-left: 10px;
+	font-size: 15px;
 }
 .myorder-content ul li:nth-child(3){
 	width: 30%;
+	text-align: right;
+}
+.myorder-content ul li:nth-child(3) p{
 	font-size: 14px;
+	padding-bottom: 5px;
+	padding-top: 3px;
+}
+.ordergood-dd {
+	padding: 10px;
+}
+.ordergood-dd p{
+	font-size: 14px;
+	text-align: right;
+	padding-bottom: 8px;
+}
+.ordergood-dd p .span-color{
+	color: #ff771b;
+}
+.myorder-content .ordergood-dd .ordergood-ddd{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 70%;
+	text-align: left;
+	padding-left: 32%;
+}
+.ordergood-dd .ordergood-ddd a{
+	display: block;
+	flex: 1 1 50%;
+	border: 1px solid #CCCCCC;
 	text-align: center;
-	padding-top: 55px;
+	margin: 0px 10px;
+	padding: 2px;
+	color: #666666;
+}
+.ordergood-dd .ordergood-ddd .payment{
+	background: #ff771b;
+	border: 1px solid #ff771b;
+	color: #FFFFFF;
 }

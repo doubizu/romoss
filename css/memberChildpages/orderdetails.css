@@ -1,6 +1,6 @@
 
 /*第一个模块*/
-.orderdetail-a,.orderdetail-b{
+.orderdetail-a,.orderdetail-b,.orderdetail-d{
 	background: #FFFFFF;
 	margin: 10px 0px;
 	color: #666666;
@@ -14,13 +14,37 @@
 	border-bottom: 1px solid #CCCCCC;
 }
 .orderdetail-data{
+	padding: 1px 0px;
+}
+.orderdetail-dataone{
 	border-bottom: 1px solid #CCCCCC;
+}
+.orderdetail-data .order-bb{
+	width: 100%;
+	padding: 5px 10px;
+	
+}
+.orderdetail-data .order-bb .order-bttom{
+	padding-right: 20px;
+}
+.orderdetail-data .orderdata{
+	border-bottom: 1px solid #CCCCCC;
+}
+.orderdetail-data .orderdata:last-child{
+	border-bottom: none;
+}
+.orderdetail-data .order-bttom a{
+	font-size: 12px;
+	display: block;
+	color: #666666;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	margin: 10px 0px;
 }
 .orderdetail-right{
 	padding: 10px;
 	text-align: right;
 }
-
 
 /*第三个模块*/
 .orderdetail-c{
@@ -35,7 +59,6 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
 	-webkit-flex: 1 1 auto;
 	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
