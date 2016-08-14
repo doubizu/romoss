@@ -1,0 +1,305 @@
+html,
+body {
+  background-color: #e5e5e5;
+  font-family: "微软雅黑";
+}
+/**
+ * 设计层样式
+ */
+.design {
+  position: relative;
+  height: 870px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  background: url(../img/designpc/probg.png) center center no-repeat;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.design .polymos {
+  width: 286px;
+  height: 625px;
+}
+.radius-top-left {
+  border-top-left-radius: 20px;
+}
+.radius-top-right {
+  border-top-right-radius: 20px;
+}
+.radius-bottom-left {
+  border-bottom-left-radius: 20px;
+}
+.radius-bottom-right {
+  border-bottom-right-radius: 20px;
+}
+/**
+ * 功能按钮样式 
+ */
+.items {
+  position: absolute;
+  right: 0px;
+}
+.items > div {
+  width: 140px;
+  height: 80px;
+  line-height: 80px;
+  background-repeat: no-repeat;
+  text-align: right;
+  color: #FFFFFF;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+#img {
+  background-image: url(../img/designpc/img.png);
+}
+#upload {
+  background-image: url(../img/designpc/upfile.png);
+}
+#text {
+  background-image: url(../img/designpc/text.png);
+}
+#zoom {
+  background-image: url(../img/designpc/zoom.png);
+}
+#rotate {
+  background-image: url(../img/designpc/rotate.png);
+}
+#delete {
+  background-image: url(../img/designpc/delete.png);
+}
+/**
+ * 按钮组样式 
+ */
+.buttonnav {
+  margin-top: 15px;
+  text-align: center;
+}
+.buttonnav > button {
+  width: 250px;
+}
+.buttonnav > button > img {
+  vertical-align: bottom;
+}
+/**
+ * 路径样式 
+ */
+.navpath {
+  width: 558px;
+  margin: 0px auto 15px;
+}
+.navpath > div {
+  width: 186px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  color: #04a7b0;
+}
+.navpath > div:nth-child(1) {
+  background-image: url("../img/designpc/3.png");
+}
+.navpath > div:nth-child(1).current {
+  background-image: url("../img/designpc/4.png");
+  color: #FFFFFF;
+}
+.navpath > div:not(:nth-child(1)) {
+  background-image: url("../img/designpc/1.png");
+}
+.navpath > div:not(:nth-child(1)).current {
+  background-image: url("../img/designpc/2.png");
+  color: #FFFFFF;
+}
+/**
+ * 定制协议模态框 
+ */
+.warning .modal-dialog {
+  margin-top: 250px;
+}
+.warning .modal-header {
+  background-color: #04a7b0;
+  color: #FFFFFF;
+}
+.warning .modal-header h4 {
+  text-align: center;
+}
+.warning .modal-body {
+  padding: 30px;
+  color: #bcbcbc;
+}
+/**
+ * 文本输入模态框
+ */
+.textmodul .modal-dialog {
+  margin-top: 250px;
+}
+.textmodul .modal-header {
+  background-color: #04a7b0;
+  color: #FFFFFF;
+}
+.textmodul .modal-header h4 {
+  text-align: center;
+}
+.textmodul .modal-body {
+  padding: 30px;
+  color: #bcbcbc;
+}
+.textmodul .modal-body {
+  padding: 0px;
+}
+.textmodul .modal-body textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  outline: none;
+}
+.page {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  border: 1px solid #04a7b0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  overflow: hidden;
+}
+.imgpage .nav {
+  background-color: #04a7b0;
+}
+.imgpage .nav > li > a {
+  color: #FFFFFF;
+}
+.imgpage .nav-tabs > li.active > a {
+  color: #04a7b0;
+}
+.imgpage .nav-tabs > li:last-child {
+  float: right;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 7px 15px;
+}
+.imgpage .tab-content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 95%;
+  padding: 15px;
+  margin: 0px;
+}
+.mydesignpage .nav {
+  background-color: #04a7b0;
+}
+.mydesignpage .nav > li > a {
+  color: #FFFFFF;
+}
+.mydesignpage .nav-tabs > li.active > a {
+  color: #04a7b0;
+}
+.mydesignpage .nav-tabs > li:last-child {
+  float: right;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 7px 15px;
+}
+.mydesignpage .tab-content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 95%;
+  padding: 15px;
+  margin: 0px;
+}
+.dealer {
+  position: absolute;
+  bottom: -140px;
+  left: 0px;
+  right: 0px;
+  height: 140px;
+  background-color: #b2b2b2;
+  transition: all 0.3s linear;
+}
+.dragdealer {
+  height: 40px;
+  position: relative;
+  background-color: #FFFFFF;
+  width: 60%;
+  margin: 50px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+}
+.dragdealer .blue-bar {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  position: absolute;
+  background-color: #04a7b0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  margin-top: -20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+/**
+ * 文本设置 
+ */
+.textsetting {
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  margin: 30px auto;
+}
+.textsetting .form-group > select {
+  width: 150px;
+}
+.textsetting .form-group > input[type=color] {
+  width: 150px;
+  height: 30px;
+}
+/**
+ * 文件上传进度条 
+ */
+.upfileprogress {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.upfileprogress .progress {
+  width: 80%;
+  height: 60px;
+  margin: 300px auto;
+}
+.upfileprogress .progress .progress-bar {
+  line-height: 60px;
+}
+.btn-primary {
+  background-color: #04a7b0;
+  border-color: #04a7b0;
+}
+/*# sourceMappingURL=roomspc.css.map */

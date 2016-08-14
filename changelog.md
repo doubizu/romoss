@@ -1,3 +1,19 @@
+#2016/8/14更新
+更新PC端订制页面
+css/bootstrap.min.css
+css/roomspc.css
+designpc.html
+font/glyphicons-halflings-regular.eot
+font/glyphicons-halflings-regular.svg
+font/glyphicons-halflings-regular.woff
+font/glyphicons-halflings-regular.woff2
+fonts/
+img/designpc/
+js/bootstrap.min.js
+js/html5shiv.js
+js/respond.min.js
+js/draw.js
+
 #2016/8/13更新
 保存后不清空canvas 增加下移图层功能
 modified:   design.html
