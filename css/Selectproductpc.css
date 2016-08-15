@@ -1,0 +1,257 @@
+/*选择产品的banan图片*/
+.Selectproduct .banner img{
+	width: 100%;
+}
+.Selectproduct .banner-a{
+	background: #ff8e0f;
+	padding: 15px 0px;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+.Selectproduct .banner-b{
+	background: #FFFFFF;
+	padding-top: 10px;
+}
+
+/*选择产品的内容*/
+.Selectproduct-connent{
+	background: #FFFFFF;
+}
+
+/*产品的左右切换按钮*/
+.switch {
+	width: 1170px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	_height: 100%;
+	padding-bottom: 10px;
+}
+
+.picbox {
+	width: 1070px;
+	height: 390px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
+.picbox .piclist {
+	width: 2140px;
+	height: 390px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.swaplist {
+	position: absolute;
+	left: -3000px;
+	top: 0px
+}
+
+.og_prev,
+.og_next {
+	width: 50px;
+	height: 80px;
+	font-size: 50px;
+	line-height: 50px;
+	color: #01a5b9;
+	position: absolute;
+	top: 120px;
+	cursor: pointer;
+}
+
+.og_prev {
+	left: -4px;
+}
+
+.og_next {
+	right: -20px;
+}
+
+.picbox .piclist li {
+	display: block;
+	width: 301px;
+	height: 390px;
+	float: left;
+	background: #FFFFFF;
+	margin: 0px 25px;
+	text-align: center;
+}
+.picbox .piclist li:first-child{
+	margin-left: 0px;
+}
+.picbox .piclist li .img-ccun{
+	width: 300px;
+	height: 216px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+.picbox .piclist li .img-ccun:hover{
+	border: 2px solid #04A7B0;
+	width: 298px;
+	height: 214px;
+}
+.picbox .piclist li  .img-ccun img {
+	width: 100%;
+}
+.picbox .piclist li dl {
+	margin-top: -10px;
+}
+.picbox .piclist li a{
+	text-decoration: none;
+}
+.picbox .piclist li dl dt{
+	font-size: 16px;
+	color: #000000;
+}
+.picbox .piclist li dl .xian{
+	height:1px;
+	width:30px;
+	background: #ff8e0f;
+	margin: 0 auto;
+	display: inline-block;
+}
+.picbox .piclist li dd {
+	padding-top: 5px;
+	color: #999999;
+}
+
+
+
+
+/*展示产品的信息*/
+.product-content{
+	background: #e5e5e5;
+}
+.product-content .product-a{
+	width: 1170px;
+	margin: 30px auto;
+}
+.product-content .product-aa{
+	margin-bottom: 30px;
+}
+.product-content .product-aa,.product-content .left-title,.product-content .product-bb,.product-content .right-title{
+	overflow: hidden;
+}
+.product-content .left-title{
+	width: 250px;
+}
+
+.product-content .product-aa .product-left{
+	float: left;
+	overflow: hidden;
+	width: 400px;
+}
+.product-content .product-aa .product-left .left-left{
+	float: left;
+	position: relative;
+}
+.product-content .dingwei{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	font-size: 17px;
+	color: #FFFFFF;
+}
+.product-content .product-aa .product-left .left-right{
+	font-size: 18px;
+	padding-top: 10px;
+	margin-left: 50px;
+    padding-bottom: 5px;
+	border-bottom: 1px solid #666;
+	color: #FF8E0F;
+}
+
+.product-content .left-content{
+	width: 200px;
+	margin-left: 50px;
+	font-size: 16px;
+}
+.product-content .product-aa .product-right,.product-content .product-bb .product-left{
+	width:770px;
+	background-size:100% 100%;
+	padding: 30px 0px;
+}
+.product-content .product-aa .product-right{
+	float: right;
+	background: url(../img/Selectproduct/juxing2.png) center no-repeat;
+}
+.product-content .product-aa .right-content{
+	border: 2px solid #FFFFFF;
+	width: 300px;
+	margin-left: 360px;
+	text-align: center;
+	padding: 15px 0px;
+	margin-top: -8px;
+}
+
+.product-content .product-bb .product-left{
+	float: left;
+	background: url(../img/Selectproduct/12.png) center no-repeat;
+}
+.product-content .product-bb .left-content{
+	border: 2px solid #FFFFFF;
+	width: 300px;
+	padding: 15px 0px;
+	text-align: center;
+	margin-left: 100px;
+}
+.product-content .product-bb .product-right{
+	float: right;
+	overflow: hidden;
+	width: 400px;
+}
+.product-content .product-bb .product-right .right-title{
+	width: 250px;
+	margin-left: 140px;
+}
+.product-content .product-bb .product-right .right-left{
+	float: left;
+	font-size: 18px;
+	padding-top: 10px;
+    padding-bottom: 5px;
+	color: #FF8E0F;
+	text-align: right;
+	border-bottom:1px solid #666 ;
+	width: 180px;
+}
+.product-content .product-bb .product-right .right-right{
+	float: right;
+	position: relative;
+}
+
+.product-content .right-content{
+	width: 200px;
+	margin-top: 50px;
+	font-size: 16px;
+	margin-left: 130px;
+}
+
+
+/*底下的图案*/
+.product-footer{
+    background: #fbf9fa;
+}
+.product-footera{
+	width: 1170px;
+	margin:0px auto;
+}
+
+
+.Designer{
+	text-align: center;
+	color: #04a7b0;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 50px 0px;
+}
+.desingners{
+	width: 800px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.product-footer img{
+	width: 100%;
+}

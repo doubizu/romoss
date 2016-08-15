@@ -1,0 +1,66 @@
+html,
+body {
+  background-color: #e5e5e5;
+  font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+
+img{
+	border: none;
+}
+
+/*导航的小标题*/
+.nav-common{
+	background: none;
+	margin-top: -10px;
+	margin-bottom: 10px;
+		
+}
+.nav-common a{
+	font-size: 15px;
+	color: #04A7B0;
+
+}
+.nav-common>li+li:before {
+    padding: 0 3px;
+    color: #04A7B0;
+    content: "|\00a0";
+}
+
+/**
+ * 路径样式 
+ */
+.navpath {
+  width: 558px;
+  margin: 0px auto 15px;
+}
+.navpath > div {
+  width: 186px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+}
+.navpath > div a{
+	 color: #04a7b0;
+	 text-decoration: none;
+}
+.navpath > div:nth-child(1) {
+  background-image: url("../img/designpc/3.png");
+}
+.navpath > div:nth-child(1).current {
+  background-image: url("../img/designpc/4.png");
+}
+.navpath .current a{
+ color: #FFFFFF;
+}
+.navpath > div:not(:nth-child(1)) {
+  background-image: url("../img/designpc/1.png");
+}
+.navpath > div:not(:nth-child(1)).current {
+  background-image: url("../img/designpc/2.png");
+  color: #FFFFFF;
+}

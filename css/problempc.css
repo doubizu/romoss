@@ -1,0 +1,45 @@
+html,
+body {
+  background-color: #FFFFFF;
+}
+
+.problem-title{
+	background: url(../img/problempc/juxing.png) center no-repeat;
+	padding: 15px 0px;
+	color:#fff;
+}
+.problem-content .problem-list{
+	background: #E5E5E5;
+	padding: 25px 100px;
+}
+.problem-content .panel-heading{
+	background:#04a7b0;
+	font-size: 16px;
+}
+.panel-primary {
+    border-color: #04a7b0;
+}
+.problem-content .panel-body{
+	font-size: 16px;
+	color: #666666;
+}
+.problem-footer{
+	padding: 15px 0px;
+	color: #999;
+}
+.problem-back a{
+	display: inline-block;
+	background: #04A7B0;
+	padding: 10px 30px;
+	font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius:5px;
+  -moz-border-radius: 5px; /* Firefox */
+  -webkit-border-radius: 5px; /* Safari 和 Chrome */
+
+}
+.problem-back img{
+	vertical-align: middle;
+	padding-right: 10px;
+}

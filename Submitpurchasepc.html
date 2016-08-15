@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>提交购买</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/commonpc.css" />
+		<link rel="stylesheet" type="text/css" href="font/font.css" />
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	      <script src="js/html5shiv.js"></script>
+	      <script src="js/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body>
+		<img src="img/designpc/logo.png" />
+		<div class="container" style="min-width: 1170px;">
+			<div class="row">
+				<div class="navpath clearfix">
+					<div>
+						<a href="Selectproductpc.html">1.选择产品</a>
+					</div>
+					<div>
+						<a href="designpc.html">2.进行设计</a>
+					</div>
+					<div class="current">
+						<a href="Submitpurchasepc.html">3.提交购买</a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="text-align: right;">
+				<ol class="breadcrumb nav-common">
+					<li>
+						<a href="javascript:;" style="outline: none;" data-toggle="modal" data-target="#warning">定制协议</a>
+					</li>
+					<li>
+						<a href="problempc.html">常见问题</a>
+					</li>
+					<li>
+						<a href="javascript:;" id="mydesign">我的作品</a>
+					</li>
+				</ol>
+			</div>
+			<div class="row" style="background: #fff; padding:230px 0px;text-align: center;">
+				<div>
+					<img src="img/Submitpurchasepc/erweima.png" />
+				</div>
+				<div style="padding: 10px;font-size: 16px;">请扫描二维码登录微信端购买</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				//切换
+				$(".navpath div").click(function() {
+					$(this).siblings().removeClass("current");
+					$(this).addClass("current");
+				});
+			})
+		</script>
+	</body>
+
+</html>

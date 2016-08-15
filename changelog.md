@@ -1,3 +1,17 @@
+#2016/8/15更新
+更新PC端订制页面
+Selectproductpc.html
+Submitpurchasepc.html
+problempc.html
+modified:desingpc.html
+css/Selectproductpc.css
+css/commonpc.css
+css/problempc.css
+img/Selectproduct
+img/problempc
+img/Submitpurchasepc
+js/selectproduct
+
 #2016/8/14更新
 更新PC端订制页面
 css/bootstrap.min.css
