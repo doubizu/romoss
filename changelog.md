@@ -1,4 +1,13 @@
 #2016/8/15更新
+modified:  Selectproductpc.html
+modified:  Submitpurchasepc.html
+modified:  problempc.html
+modified:  css/Selectproductpc.css
+modified:  css/problempc.css
+js/changeImg.js
+
+
+#2016/8/15更新
 更新PC端订制页面
 Selectproductpc.html
 Submitpurchasepc.html

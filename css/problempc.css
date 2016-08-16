@@ -15,6 +15,7 @@ body {
 .problem-content .panel-heading{
 	background:#04a7b0;
 	font-size: 16px;
+	border-color: #04a7b0;
 }
 .panel-primary {
     border-color: #04a7b0;

@@ -47,6 +47,7 @@ img{
 .navpath > div a{
 	 color: #04a7b0;
 	 text-decoration: none;
+	 font-size: 16px;
 }
 .navpath > div:nth-child(1) {
   background-image: url("../img/designpc/3.png");

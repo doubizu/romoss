@@ -55,12 +55,38 @@
 				选择你要的商品
 			</div>
 			<div class="row text-center banner-b">
-				<img src="img/Selectproduct/sanjiaoxing.png" />
+				<div class="banner-img">
+					<img src="img/Selectproduct/sanjiaoxing.png" />
+				</div>
 			</div>
 			<div class="Selectproduct-connent">
-				<div class="switch">
-					<div class="picbox">
-						<ul class="piclist mainlist">
+				<div class="focus-img" id="focus-img">
+					<div class="focus-img-con" id="focus-img-con">
+						<ul>
+							<li>
+								<a href="#" target="_blank">
+									<div class="img-ccun">
+										<img src="img/Selectproduct/tupian.png" />
+									</div>
+									<dl>
+										<dt>sense4</dt>
+										<dd class="xian"></dd>
+										<dd>ROMOSS/罗马仕sense4正品10000+毫安移动电源 手机通用充电宝</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank">
+									<div class="img-ccun">
+										<img src="img/Selectproduct/tupian.png" />
+									</div>
+									<dl>
+										<dt>sense4</dt>
+										<dd class="xian"></dd>
+										<dd>ROMOSS/罗马仕sense4正品10000+毫安移动电源 手机通用充电宝</dd>
+									</dl>
+								</a>
+							</li>
 							<li>
 								<a href="#" target="_blank">
 									<div class="img-ccun">
@@ -111,8 +137,6 @@
 							</li>
 						</ul>
 					</div>
-					<div class="og_prev">&lt;</div>
-					<div class="og_next">&gt;</div>
 				</div>
 			</div>
 			<div class="row product-content">
@@ -121,7 +145,9 @@
 						<div class="product-left">
 							<div class="left-title">
 								<div class="left-left">
-									<img src="img/Selectproduct/duobianxing.png" width="70%" />
+									<div class="duobian">
+										<img src="img/Selectproduct/duobianxing.png"/>
+									</div>
 									<div class="dingwei">
 										01
 									</div>
@@ -152,7 +178,9 @@
 									你最爱的宝宝
 								</div>
 								<div class="right-right">
-									<img src="img/Selectproduct/duobianxing.png" width="70%"/>
+									<div class="duobian">
+										<img src="img/Selectproduct/duobianxing.png"/>
+									</div>
 									<div class="dingwei">
 										02
 									</div>
@@ -168,21 +196,29 @@
 			<div class="row product-footer">
 				<div class="product-footera">
 					<div class="Designer">
-						<b> ———————————— &nbsp;你，就是自己的设计师&nbsp; ————————————</b>
+						<b> ———————————— &nbsp;&nbsp;你，就是自己的设计师&nbsp;&nbsp; ————————————</b>
 					</div>
 					<div class="desingners">
-						<img src="img/Selectproduct/tuan.png"/>
+						<img src="img/Selectproduct/tuan.png" />
 					</div>
 				</div>
 			</div>
 		</div>
-		<script src="js/selectproduct.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/changeImg.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
 				//切换
 				$(".navpath div").click(function() {
 					$(this).siblings().removeClass("current");
 					$(this).addClass("current");
+				});
+				//轮播图
+				$("#focus-img").changeImg({
+					'boxWidth': 1070,
+					'changeLen': 3,
+					'changeSpend': 1,
+					'autoChange': true,
+					'changeHandle': true
 				});
 			})
 		</script>
