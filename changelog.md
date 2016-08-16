@@ -1,4 +1,12 @@
-#2016/8/15更新
+
+#2016/8/16 18：36更新
+更新除了desingpc页面的定制协议
+modified:  css/commonpc.css
+modified:  css/roomspc.css
+modified:  Selectproductpc.html
+modified:  Submitpurchasepc.html
+
+#2016/8/16更新
 modified:  Selectproductpc.html
 modified:  Submitpurchasepc.html
 modified:  problempc.html

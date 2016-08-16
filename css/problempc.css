@@ -23,6 +23,7 @@ body {
 .problem-content .panel-body{
 	font-size: 16px;
 	color: #666666;
+	border-color: #fff;
 }
 .problem-footer{
 	padding: 15px 0px;
