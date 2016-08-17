@@ -1,3 +1,12 @@
+#2016/8/17下午更新
+modified: Selectproductpc.html
+modified: Submitpurchasepc.html
+modified:desingpc.html
+modified:css/Selectproductpc.css
+modified: css/commonpc.css
+modified:css/roomspc.css
+Selectproductmydesignpc.html
+img/png/tupian1
 
 #2016/8/16 18：36更新
 更新除了desingpc页面的定制协议

@@ -44,12 +44,12 @@
 						<a href="problempc.html">常见问题</a>
 					</li>
 					<li>
-						<a href="javascript:;" id="mydesign">我的作品</a>
+						<a href="Selectproductmydesignpc.html" id="mydesign">我的作品</a>
 					</li>
 				</ol>
 			</div>
 		</div>
-		<div class="Selectproduct">
+		<div class="Selectproduct" id="tan-t" style="position: relative;">
 			<div class="row banner">
 				<img src="img/Selectproduct/banner.png" />
 			</div>
@@ -205,7 +205,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		<!-- 定制协议模态框 -->
 		<div class="modal fade warning" id="warning" tabindex="-1" role="dialog" aria-labelledby="定制协议">
 			<div class="modal-dialog" role="document">
@@ -229,6 +228,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script src="js/changeImg.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
@@ -244,6 +244,15 @@
 					'changeSpend': 10,
 					'autoChange': true,
 					'changeHandle': true
+				});
+				//初始化我的订制窗口
+				var $mydesing = $(".mydesignpage");
+//				$mydesing.find(".glyphicon-remove").click(function() {
+//					$mydesing.fadeOut("fast");
+//				});
+				//我的作品按钮
+				$("#mydesign").click(function() {
+					$mydesing.fadeIn("fast");
 				});
 			})
 		</script>

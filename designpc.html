@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>定制页面</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/commonpc.css"/>
+		<link rel="stylesheet" type="text/css" href="css/commonpc.css" />
 		<link rel="stylesheet" type="text/css" href="css/roomspc.css" />
-		<link rel="stylesheet" type="text/css" href="font/font.css"/>
+		<link rel="stylesheet" type="text/css" href="font/font.css" />
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/dragdealer.min.js" type="text/javascript" charset="utf-8"></script>
@@ -22,14 +22,20 @@
 
 	<body>
 		<div style="padding: 10px 20px;">
-			<img src="img/designpc/logo.png"/>
+			<img src="img/designpc/logo.png" />
 		</div>
-		<div class="container" style="min-width: 1170px;">
+		<div class="container" style="min-width: 1170px;position: relative;">
 			<div class="row">
 				<div class="navpath clearfix">
-					<div><a href="Selectproductpc.html">1.选择产品</a></div>
-					<div class="current"><a href="designpc.html">2.进行设计</a></div>
-					<div><a href="Submitpurchasepc.html">3.提交购买</a></div>
+					<div>
+						<a href="Selectproductpc.html">1.选择产品</a>
+					</div>
+					<div class="current">
+						<a href="designpc.html">2.进行设计</a>
+					</div>
+					<div>
+						<a href="Submitpurchasepc.html">3.提交购买</a>
+					</div>
 				</div>
 			</div>
 			<div class="row" style="text-align: right;">
@@ -54,7 +60,7 @@
 					<div id="zoom">缩放</div>
 					<div id="rotate">旋转</div>
 					<div id="delete">删除</div>
-					<input type="file" name="upfile" id="upfile" value="" style="display: none;"/>
+					<input type="file" name="upfile" id="upfile" value="" style="display: none;" />
 				</div>
 
 				<!-- 图片选择窗 -->
@@ -256,94 +262,149 @@
 				<!-- 我的作品窗 -->
 				<div class="page mydesignpage">
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active">
-							<a href="#pay" aria-controls="pay" role="tab" data-toggle="tab">已购买</a>
-						</li>
-						<li role="presentation">
-							<a href="#nopay" aria-controls="nopay" role="tab" data-toggle="tab">未购买</a>
-						</li>
+						<li role="presentation" style="color: #FFFFFF;font-size: 16px; line-height: 50px;padding-left: 10px;">我的作品</li>
 						<li role="presentation">
 							<i class="glyphicon glyphicon-remove"></i>
 						</li>
 					</ul>
-
 					<div class="tab-content">
+						<ul class="nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#pay" aria-controls="pay" role="tab" data-toggle="tab">已购买(10)</a>
+							</li>
+							<li role="presentation">
+								<a href="#nopay" aria-controls="nopay" role="tab" data-toggle="tab">未购买(0)</a>
+							</li>
+						</ul>
 						<div role="tabpanel" class="tab-pane row active" id="pay">
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/1.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/2.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/3.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/4.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/5.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/6.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/7.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/8.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/9.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
-
 							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/9.png" alt="">
-								</a>
-							</div>
-
-							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/9.png" alt="">
-								</a>
-							</div>
-
-							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/9.png" alt="">
-								</a>
-							</div>
-
-							<div class="col-xs-6 col-md-3">
-								<a href="#" class="thumbnail">
-									<img src="img/png/9.png" alt="">
+								<a href="#" class="thumbnail tab-cotent-n">
+									<div class="mydesign-img">
+										<img src="img/png/tupian1.png" alt="">
+									</div>
+									<h4>polymoss(1000mAh)</h4>
+									<p>创建时间：<span>2016-07-15 11:55:38</span></p>
+									<p><span class="mydesign-span1">￥69.00元</span><span class="mydesign-span2">89.00</span></p>
+									<div class="del">
+										删除
+									</div>
 								</a>
 							</div>
 						</div>
@@ -353,14 +414,14 @@
 						</div>
 					</div>
 				</div>
-			
+
 				<!-- 下弹窗  -->
 				<div class="dealer"></div>
-				
+
 				<!-- 进度条弹窗 -->
 				<div class="page upfileprogress">
 					<div class="progress">
-					  <div class="progress-bar" role="progressbar"></div>
+						<div class="progress-bar" role="progressbar"></div>
 					</div>
 				</div>
 			</div>
@@ -425,40 +486,40 @@
 					</div>
 				</div>
 			</div>
-		
+
 			<!-- 绽放、旋转模板 -->
 			<script type="text/html" id="tmp_zoom">
 				<div class="dragdealer" id="dragdealer">
-		            <div class="handle blue-bar">
-		            	<span class="value"></span>
-		            </div>
-		        </div>		
+					<div class="handle blue-bar">
+						<span class="value"></span>
+					</div>
+				</div>
 			</script>
-			
+
 			<!-- 文本选择 -->
 			<script type="text/html" id="tmp_textset">
 				<form class="form-inline textsetting">
-				  <div class="form-group">
-				    <label>选择字体:</label>
-				    <select class="form-control fontselect">
-					  	<option value="Arial">默认</option>
-	                	<option>悦变</option>
-	                	<option>毛笔行书</option>
-	                	<option>古韵</option>
-	                	<option>行楷</option>
-	                	<option>硬笔行书</option>
-	                	<option>几何体</option>
-	                	<option>丛台体</option>
-	                	<option>炫丽体</option>
-	                	<option>刀锋黑草</option>
-	                	<option>萝卜体</option>
-					</select>
-				  </div>
-				  <div class="form-group">
-				    <label>选择颜色:</label>
-				    <input type="color" class="colorselect"/>
-				  </div>
-				</form> 
+					<div class="form-group">
+						<label>选择字体:</label>
+						<select class="form-control fontselect">
+							<option value="Arial">默认</option>
+							<option>悦变</option>
+							<option>毛笔行书</option>
+							<option>古韵</option>
+							<option>行楷</option>
+							<option>硬笔行书</option>
+							<option>几何体</option>
+							<option>丛台体</option>
+							<option>炫丽体</option>
+							<option>刀锋黑草</option>
+							<option>萝卜体</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>选择颜色:</label>
+						<input type="color" class="colorselect" />
+					</div>
+				</form>
 			</script>
 		</div>
 	</body>
@@ -466,28 +527,28 @@
 		$(function() {
 			//初始化canvas  响应设计窗图文切换
 			var curdraw = new Draw("polymos");
-			curdraw.onchange(function(){
-				if( curdraw.current.name.indexOf("text") != -1 ) {
-					dealerShow().then(function(){
+			curdraw.onchange(function() {
+				if(curdraw.current.name.indexOf("text") != -1) {
+					dealerShow().then(function() {
 						$dealer.html($("#tmp_textset").html());
-						$dealer.find(".colorselect").change(function(){
+						$dealer.find(".colorselect").change(function() {
 							curdraw.setColor($(this).val());
 						});
-						$dealer.find(".fontselect").change(function(){
+						$dealer.find(".fontselect").change(function() {
 							curdraw.setFamily($(this).val());
 						});
 					});
-				} else if ( curdraw.current.name.indexOf("bitmap") != -1 ) {
+				} else if(curdraw.current.name.indexOf("bitmap") != -1) {
 					dealerHide();
 				}
 			});
-			
+
 			//切换
-			$(".navpath div").click(function(){
+			$(".navpath div").click(function() {
 				$(this).siblings().removeClass("current");
 				$(this).addClass("current");
 			});
-			
+
 			//进入弹出订制协议			
 			$("#warning").modal();
 			//滑块
@@ -501,47 +562,47 @@
 				$imgpage.fadeOut("fast");
 			});
 			//选择图片
-			$imgpage.find(".thumbnail").click(function(){
+			$imgpage.find(".thumbnail").click(function() {
 				//找到图片，读取图片
 				var src = $(this).find("img").attr("src");
-				loadImg(src).then(function( img ) {
+				loadImg(src).then(function(img) {
 					dealerHide();
 					curdraw.addBitmap(img);
 					$imgpage.fadeOut("fast");
 				});
 			});
-			
+
 			//初始化我的订制窗口
 			var $mydesing = $(".mydesignpage");
 			$mydesing.find(".glyphicon-remove").click(function() {
 				$mydesing.fadeOut("fast");
 			})
-			
+
 			//文件选择框
 			var $upfile = $("#upfile");
-			$upfile.change(function(){
+			$upfile.change(function() {
 				dealerHide();
 				var file = this.files[0];
 				//检测输入
-                if( file.type == "image/png" || file.type == "image/jpg" || file.type == "image/jpeg" || file.type == "image/gif" ) {
-                	readFile( file ).then(function( img ){
-                    	curdraw.addBitmap(img);
-                    });
-                } else {
-                	alert("图片格式不正确!");
-                }
+				if(file.type == "image/png" || file.type == "image/jpg" || file.type == "image/jpeg" || file.type == "image/gif") {
+					readFile(file).then(function(img) {
+						curdraw.addBitmap(img);
+					});
+				} else {
+					alert("图片格式不正确!");
+				}
 			});
 
 			//文本输入框
 			var $inputtext = $("#inputtext");
-			$inputtext.find(".btn-primary").click(function(){
+			$inputtext.find(".btn-primary").click(function() {
 				var $text = $inputtext.find(".text");
-				if( $text.val() ) {
+				if($text.val()) {
 					curdraw.addText($text.val());
 					$text.val("");
 				}
 			});
-			
+
 			//文本按钮
 			$("#text").click(function() {
 				$inputtext.modal();
@@ -552,140 +613,144 @@
 				dealerHide();
 				$imgpage.fadeIn("fast");
 			});
-			
+
 			//我的作品按钮
-			$("#mydesign").click(function(){
+			$("#mydesign").click(function() {
 				dealerHide();
 				$mydesing.fadeIn("fast");
 			});
-			
+			//我的作品里的删除
+				$(".del").click(function () {
+					$(this).parents(".col-xs-6").remove();
+				});
 			//上传按钮
 			$("#upload").click(function() {
 				dealerHide();
 				return $upfile.click();
 			});
-			
+
 			//缩放
-			$("#zoom").click(function(){
-				if( curdraw.current === null ) {
-					return;
-				}
-				dealerShow().then(function(){
-					$dealer.html($("#tmp_zoom").html());
-					
-					var multiple = 1;
-					var width = curdraw.getScale().x;
-					if( curdraw.current.name.indexOf("text") != -1 ) {
-						multiple = 10; //文字扩大10位
-					} else if( width >= 0.8 ) { //图片如小于0.8扩大3倍
-						multiple = 3;
-					}
-					
-					new Dragdealer('dragdealer', {
-	        			x : width / multiple,
-						animationCallback: function(x, y) {
-						    $('#dragdealer .value').text(Math.round(x * 100)+"%");
-						    curdraw.setScale( x * multiple,x * multiple );
-						}
-					});
-				})
-			});
-			
-			//旋转
-			$("#rotate").click(function(){
-				if( curdraw.current === null ) {
+			$("#zoom").click(function() {
+				if(curdraw.current === null) {
 					return;
 				}
 				dealerShow().then(function() {
 					$dealer.html($("#tmp_zoom").html());
-					
+
+					var multiple = 1;
+					var width = curdraw.getScale().x;
+					if(curdraw.current.name.indexOf("text") != -1) {
+						multiple = 10; //文字扩大10位
+					} else if(width >= 0.8) { //图片如小于0.8扩大3倍
+						multiple = 3;
+					}
+
 					new Dragdealer('dragdealer', {
-	        			x : curdraw.getRotation() / 360,
+						x: width / multiple,
 						animationCallback: function(x, y) {
-						    $('#dragdealer .value').text(Math.round(x * 100) + "%");
-						    curdraw.setRotation(x * 360);
+							$('#dragdealer .value').text(Math.round(x * 100) + "%");
+							curdraw.setScale(x * multiple, x * multiple);
+						}
+					});
+				})
+			});
+
+			//旋转
+			$("#rotate").click(function() {
+				if(curdraw.current === null) {
+					return;
+				}
+				dealerShow().then(function() {
+					$dealer.html($("#tmp_zoom").html());
+
+					new Dragdealer('dragdealer', {
+						x: curdraw.getRotation() / 360,
+						animationCallback: function(x, y) {
+							$('#dragdealer .value').text(Math.round(x * 100) + "%");
+							curdraw.setRotation(x * 360);
 						}
 					});
 				});
 			});
-			
+
 			//删除
 			$("#delete").click(function() {
 				dealerHide();
 				curdraw.delete();
 			});
-			
+
 			//保存
-			$("#save").click(function(){
-				$progress.fadeIn("fast",function(){
+			$("#save").click(function() {
+				$progress.fadeIn("fast", function() {
 					var i = 0;
-					var time = setInterval(function(){
+					var time = setInterval(function() {
 						var temp = i * 10 + "%";
-						$progress.find(".progress-bar").css("width",temp).html(temp);
-						if( i++ == 10 ) {
-							$progress.fadeOut("fast",function(){
-								$progress.find(".progress-bar").css("width",0)
+						$progress.find(".progress-bar").css("width", temp).html(temp);
+						if(i++ == 10) {
+							$progress.fadeOut("fast", function() {
+								$progress.find(".progress-bar").css("width", 0)
 								clearInterval(time);
 							});
 						}
-					},200);
-					
+					}, 200);
+
 				});
 			});
-			
+
 			function dealerShow() {
 				var d = $.Deferred();
-				
-				if( $dealer.css("bottom") == "0px" ) {
-					$dealer.clearQueue().queue(function(){
-						$(this).css("bottom","-140px").dequeue();
-					}).delay(300).queue(function(){
-						$(this).css("bottom","0px");
+
+				if($dealer.css("bottom") == "0px") {
+					$dealer.clearQueue().queue(function() {
+						$(this).css("bottom", "-140px").dequeue();
+					}).delay(300).queue(function() {
+						$(this).css("bottom", "0px");
 						d.resolve();
 					});
 				} else {
-					$dealer.css("bottom","0px");
+					$dealer.css("bottom", "0px");
 					d.resolve();
 				}
-				
+
 				return d.promise();
 			}
-			
+
 			function dealerHide() {
 				var d = $.Deferred();
-				$dealer.clearQueue().queue(function(){
-					$dealer.css("bottom","-140px").dequeue();
-				}).delay(300).queue(function(){
+				$dealer.clearQueue().queue(function() {
+					$dealer.css("bottom", "-140px").dequeue();
+				}).delay(300).queue(function() {
 					d.resolve();
 				});
 				return d.promise();
 			}
-			
-			function loadImg( src ) {
+
+			function loadImg(src) {
 				var d = $.Deferred();
-				
+
 				var img = new Image();
 				img.src = src;
 				img.onload = function() {
-					d.resolve( img );
+					d.resolve(img);
 				}
-				
+
 				return d.promise();
 			}
-			
-			function readFile( file ) {
+
+			function readFile(file) {
 				var d = $.Deferred();
 				var fr = new FileReader();
-				fr.readAsDataURL( file );
+				fr.readAsDataURL(file);
 				fr.onload = function() {
 					var img = new Image();
-		            img.src = fr.result;
-		            img.onload = function() {
-		                d.resolve( img );
-		            }
+					img.src = fr.result;
+					img.onload = function() {
+						d.resolve(img);
+					}
 				}
 				return d.promise();
 			}
 		});
 	</script>
+
 </html>

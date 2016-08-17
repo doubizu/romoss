@@ -23,13 +23,13 @@
 		<div class="container" style="min-width: 1170px;">
 			<div class="row">
 				<div class="navpath clearfix">
-					<div>
+					<div class="current">
 						<a href="Selectproductpc.html">1.选择产品</a>
 					</div>
 					<div>
 						<a href="designpc.html">2.进行设计</a>
 					</div>
-					<div class="current">
+					<div>
 						<a href="Submitpurchasepc.html">3.提交购买</a>
 					</div>
 				</div>
@@ -47,13 +47,9 @@
 					</li>
 				</ol>
 			</div>
-			<div class="row" style="background: #fff; padding:230px 0px;text-align: center; position: relative;">
-				<div>
-					<img src="img/Submitpurchasepc/erweima.png" />
-				</div>
-				<div style="padding: 10px;font-size: 16px;">请扫描二维码登录微信端购买</div>
+			<div class="row" style="background: #fff; padding:350px 0px;text-align: center; position: relative;">
 				<!-- 我的作品窗 -->
-				<div class="page mydesignpage">
+				<div class="page mydesignpage" style="display: block;">
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" style="color: #FFFFFF;font-size: 16px; line-height: 50px;padding-left: 10px;">我的作品</li>
 						<li role="presentation">
@@ -207,9 +203,7 @@
 						</div>
 					</div>
 				</div>
-				
 			</div>
-
 		</div>
 		<!-- 定制协议模态框 -->
 		<div class="modal fade warning" id="warning" tabindex="-1" role="dialog" aria-labelledby="定制协议">
@@ -245,11 +239,10 @@
 				//初始化我的订制窗口
 				var $mydesing = $(".mydesignpage");
 				$mydesing.find(".glyphicon-remove").click(function() {
-					$mydesing.fadeOut("fast");
+						window.location.href="Selectproductpc.html"
 				});
-				//我的作品按钮
+					//我的作品按钮
 				$("#mydesign").click(function() {
-					//					$(".page").show();
 					$mydesing.fadeIn("fast");
 				});
 				//我的作品里的删除

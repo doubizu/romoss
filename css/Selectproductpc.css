@@ -1,4 +1,7 @@
 /*选择产品的banan图片*/
+.Selectproduct{
+	width: 100%;
+}
 .Selectproduct .banner img{
 	width: 100%;
 }
