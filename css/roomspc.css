@@ -111,9 +111,72 @@
   border: none;
   outline: none;
 }
+/*图片选择窗*/
+.imgpage .nav {
+  background-color: #04a7b0;
+}
+.imgpage .nav > li > a {
+  color: #FFFFFF;
+}
+.imgpage .nav-tabs > li.active > a {
+  color: #04a7b0;
+}
+.imgpage .nav-tabs > li:last-child {
+  float: right;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 7px 15px;
+}
+.imgpage .tab-content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 95%;
+  padding: 15px;
+  margin: 0px;
+}
 
 
-
+.dealer {
+  position: absolute;
+  bottom: -140px;
+  left: 0px;
+  right: 0px;
+  height: 140px;
+  background-color: #b2b2b2;
+  transition: all 0.3s linear;
+}
+.dragdealer {
+  height: 40px;
+  position: relative;
+  background-color: #FFFFFF;
+  width: 60%;
+  margin: 50px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+}
+.dragdealer .blue-bar {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  position: absolute;
+  background-color: #04a7b0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  margin-top: -20px;
+  text-align: center;
+  color: #FFFFFF;
+}
 
 
 
