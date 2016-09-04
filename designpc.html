@@ -57,6 +57,7 @@
 					<div id="img">选图</div>
 					<div id="upload">上传</div>
 					<div id="text">文字</div>
+					<div id="down">下移</div>
 					<div id="zoom">缩放</div>
 					<div id="rotate">旋转</div>
 					<div id="delete">删除</div>
@@ -416,7 +417,12 @@
 				</div>
 
 				<!-- 下弹窗  -->
-				<div class="dealer"></div>
+				<div class="dealer">
+					<div class="content">
+						
+					</div>
+					<button type="button" class="btn btn-default">确定</button>
+				</div>
 
 				<!-- 进度条弹窗 -->
 				<div class="page upfileprogress">
@@ -619,10 +625,12 @@
 				dealerHide();
 				$mydesing.fadeIn("fast");
 			});
+			
 			//我的作品里的删除
-				$(".del").click(function () {
+			$(".del").click(function () {
 					$(this).parents(".col-xs-6").remove();
 				});
+			
 			//上传按钮
 			$("#upload").click(function() {
 				dealerHide();
@@ -637,13 +645,13 @@
 				dealerShow().then(function() {
 					$dealer.html($("#tmp_zoom").html());
 
-					var multiple = 1;
+					var multiple = 10;
 					var width = curdraw.getScale().x;
-					if(curdraw.current.name.indexOf("text") != -1) {
-						multiple = 10; //文字扩大10位
-					} else if(width >= 0.8) { //图片如小于0.8扩大3倍
-						multiple = 3;
-					}
+//					if(curdraw.current.name.indexOf("text") != -1) {
+//						multiple = 10; //文字扩大10位
+//					} else if(width >= 0.8) { //图片如小于0.8扩大3倍
+//						multiple = 3;
+//					}
 
 					new Dragdealer('dragdealer', {
 						x: width / multiple,
@@ -696,7 +704,12 @@
 
 				});
 			});
-
+			
+			//下移
+			$("#down").click(function(){
+				curdraw.down();
+			});
+			
 			function dealerShow() {
 				var d = $.Deferred();
 

@@ -62,6 +62,9 @@
 #text {
   background-image: url(../img/designpc/text.png);
 }
+#down {
+  background-image: url(../img/designpc/text.png);
+}
 #zoom {
   background-image: url(../img/designpc/zoom.png);
 }
@@ -178,10 +181,6 @@
   color: #FFFFFF;
 }
 
-
-
-
-
 /**
  * 文本设置 
  */
@@ -194,7 +193,7 @@
 .textsetting .form-group > select {
   width: 150px;
 }
-.textsetting .form-group > input[type=color] {
+.textsetting .form-group > input{
   width: 150px;
   height: 30px;
 }
@@ -212,5 +211,3 @@
 .upfileprogress .progress .progress-bar {
   line-height: 60px;
 }
-
-/*# sourceMappingURL=roomspc.css.map */
