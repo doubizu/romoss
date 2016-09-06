@@ -417,12 +417,7 @@
 				</div>
 
 				<!-- 下弹窗  -->
-				<div class="dealer">
-					<div class="content">
-						
-					</div>
-					<button type="button" class="btn btn-default">确定</button>
-				</div>
+				<div id="dealer" class="dealer"></div>
 
 				<!-- 进度条弹窗 -->
 				<div class="page upfileprogress">
@@ -558,7 +553,13 @@
 			//进入弹出订制协议			
 			$("#warning").modal();
 			//滑块
-			var $dealer = $(".dealer");
+			var $dealer = $("#dealer");
+			$dealer.click(function( event ){
+				if( event.target.id == 'dealer' ) {
+					dealerHide();
+				}
+			});
+			
 			//初始化imgpage
 			var $imgpage = $(".imgpage");
 			//进度条
