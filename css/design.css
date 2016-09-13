@@ -1,8 +1,10 @@
 .design > .content {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+	display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	
 	flex-flow: row nowrap;
 }
@@ -11,10 +13,12 @@
 	-webkit-box-flex: 1 1 auto;
 	flex: 1 1 auto;
 	
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+	display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -23,12 +27,20 @@
 	-webkit-box-flex: 1 1 50px;
 	flex: 0 0 50px;
 	
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-    flex-flow: column nowrap;
+	display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	
+	
+	-webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -69,10 +81,12 @@
  */
 .imgset {
 	list-style: none;
+    display: box;
     display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	
     height: 50vh;
     flex-flow: row wrap;
@@ -91,10 +105,13 @@
  * 滑块样式
  */
 .zoom {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+	display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	
     flex-flow: row nowrap;
     background-color: transparent;
     
@@ -127,10 +144,12 @@
 }
 
 .preview > .content{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+	display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	
 	justify-content: center;
 	align-items: center;
